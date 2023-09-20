@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-toolsai.jupyter",
+		"bierner.github-markdown-preview",
+		"gimenete.github-linker",
+		"nhoizey.gremlins"
+	]
+}
