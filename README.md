@@ -12,10 +12,10 @@
 > [!IMPORTANT]
 > Include your names and `@` your GitHub usernames for each.
 
-1.
-2.
-3.
-4.
+1.@ParthaviHW
+2.@Vikas Chaudhary 
+3.@kl2063
+4.@Augustinlobjoie
 5.
 
 ## Initial Project Proposal
