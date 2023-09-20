@@ -13,7 +13,7 @@
 > Include your names and `@` your GitHub usernames for each.
 
 1.@ParthaviHW
-2.@Vikas Chaudhary 
+2.@VikasChaudhary123
 3.@kl2063
 4.@Augustinlobjoie
 
