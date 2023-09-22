@@ -12,7 +12,7 @@
 > [!IMPORTANT]
 > Include your names and `@` your GitHub usernames for each.
 
-1. Parthavi Vaghani  [@ParthaviHW](https://github.com/ParthaviHW)
+1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579)
 2. Vikas Chaudhary [@VikasChaudhary123](https://github.com/VikasChaudhary123)
 3. Kaushik Lathiya [@kl2063](https://github.com/kl2063)
 4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie)
