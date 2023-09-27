@@ -42,6 +42,8 @@
 <!-- What questions you are trying to answer? -->
 
 ### Datasets
+1. Wine Dataset - https://archive.ics.uci.edu/dataset/186/wine+quality
+2. Fruit Dataset - https://www.kaggle.com/datasets/moltean/fruits
 
 #### Dataset description
 <!-- Briefly describe your task and dataset -->
