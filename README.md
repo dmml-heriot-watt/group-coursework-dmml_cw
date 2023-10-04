@@ -28,7 +28,8 @@
 > [!NOTE]
 > What are the questions you are trying to answer? What are the goals of your project?
 
-> Wine Dataset
+>
+Wine Dataset
 1 - Decision tree to find which wine has best quality .
 2 - Clustering based on quality or chemical properties like alcohol, sugar,  acid content etc .
 
