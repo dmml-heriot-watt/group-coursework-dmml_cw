@@ -21,24 +21,20 @@
 ## Initial Project Proposal
 
 > [!NOTE]
-> Write up your project plan here.
+>Wine Dataset
+1. Decision tree to find which wine has best quality .
+2. Clustering based on quality or chemical properties like alcohol, sugar,  acid content etc .
 
-### Research objectives
-
-> [!NOTE]
-> What are the questions you are trying to answer? What are the goals of your project?
-
->
-Wine Dataset
-1 - Decision tree to find which wine has best quality .
-2 - Clustering based on quality or chemical properties like alcohol, sugar,  acid content etc .
-
-Fruit Dataset
+>Fruit Dataset
 1. For Neural Networks and CNN
 2. Classification or Regression    
 3. Performance Assessment: to measure accuracy, precision, recall, F score etc.
 4. Generalization: to make accurate prediction for new data
 5. Optimization: to achieve the best possible performance by adjusting parameters
+### Research objectives
+
+> [!NOTE]
+> What are the questions you are trying to answer? What are the goals of your project?
 
 ### Milestones
 
