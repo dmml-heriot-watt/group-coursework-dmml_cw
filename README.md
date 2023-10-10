@@ -31,6 +31,10 @@
 3. Performance Assessment: to measure accuracy, precision, recall, F score etc.
 4. Generalization: to make accurate prediction for new data
 5. Optimization: to achieve the best possible performance by adjusting parameters
+
+## Project Planning
+Wiki for maintain weekly task of the project
+[Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/Wiki)
 ### Research objectives
 
 > [!NOTE]
