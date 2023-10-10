@@ -34,7 +34,7 @@
 
 ## Project Planning
 Wiki for maintain weekly task of the project
-[Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/Wiki)
+[Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
 ### Research objectives
 
 > [!NOTE]
