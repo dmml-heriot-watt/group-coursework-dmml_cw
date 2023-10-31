@@ -34,7 +34,7 @@
 
 ## Project Planning
 Wiki for maintain weekly task of the project
-[Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
+- [Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
 ### Research objectives
 
 > [!NOTE]
@@ -70,16 +70,18 @@ Wiki for maintain weekly task of the project
 
 #### Dataset exploration
 <!-- What is the size of the dataset? -->
+**Size and Structure**
+- The dataset consists of 6497 entries and 13 features including a Numeric type and a wine_name feature of categorical type.
+- The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
+  
 <!-- Train,validation,splits? -->
+**Train, Validation and Split**
 <!-- Summary statistics of your dataset -->
 <!-- Visualisations of your dataset -->
 <!-- Analysis of your dataset -->
 
 ##### Data Visualization 
 **Insights from wine dataset:**
-
--   The dataset contains 6497 entries and 13 features, including a Numeric type and a wine_name feature of categorical type.
--   There are 1599 entries for Red wine 4898 entries for white wine in this Dataset.
 -   There are no missing values in the dataset.
 -   Some observations from the summary statistics:
     -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
