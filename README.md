@@ -96,7 +96,7 @@ Wiki for maintain weekly task of the project
 
 
 ### Clustering
-
+Implemented K-Means Clustering, used Elbow method and silhouette score to verify number of clusters. 
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
 
