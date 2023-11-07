@@ -54,14 +54,13 @@ Wiki for maintain weekly task of the project
 <!-- What questions you are trying to answer? -->
 
 ### Datasets
-1. Wine Dataset - https://archive.ics.uci.edu/dataset/186/wine+quality
-2. Fruit Dataset - https://www.kaggle.com/datasets/moltean/fruits
+1. Wine Quality Dataset - https://doi.org/10.24432/C56S3T
+2. Fruit 360 Dataset - https://www.kaggle.com/datasets/moltean/fruits
 
 #### Dataset description
 
-Wine Quality Dataset
---------------------
-The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, including attributes like acidity, pH, alcohol content, and more. Each wine is associated with a quality rating. The objective of this project is to build a machine learning model that can predict the quality of a wine based on its chemical composition. This task involves data preprocessing, and model building using Python and scikit-learn.
+##### Wine Quality Dataset
+The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, including attributes like acidity, pH, alcohol content, and more. Each wine is associated with a quality rating. The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. This task involves data preprocessing, and model building using Python and scikit-learn.
 
 Additional Variable Information
 1 - fixed acidity
@@ -81,7 +80,15 @@ Dataset: Wine Quality Dataset
 Source: Cortez, Paulo, Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Wine Quality. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T.
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 Accessed on: 20/09/2023
-Adapted by: 
+
+##### Fruit 360 Dataset
+
+Fruits 360 dataset is a dataset that contains images of different fruits. These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. The Fruit Dataset is a valuable resource tailored for neural networks. This dataset serves multiple purposes, including classification and regression tasks. It is used for performance assessment, measuring metrics like accuracy, precision, recall, and F-score.
+
+Dataset: Fruit 360 Dataset
+Source: Horea Muresan and Mihai Oltean. Fruits 360. Kaggle. https://www.kaggle.com/datasets/moltean/fruits.
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+Accessed on: 20/09/2023
 
 #### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
