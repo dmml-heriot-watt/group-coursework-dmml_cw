@@ -58,7 +58,30 @@ Wiki for maintain weekly task of the project
 2. Fruit Dataset - https://www.kaggle.com/datasets/moltean/fruits
 
 #### Dataset description
-<!-- Briefly describe your task and dataset -->
+
+Wine Quality Dataset
+--------------------
+The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, including attributes like acidity, pH, alcohol content, and more. Each wine is associated with a quality rating. The objective of this project is to build a machine learning model that can predict the quality of a wine based on its chemical composition. This task involves data preprocessing, and model building using Python and scikit-learn.
+
+Additional Variable Information
+1 - fixed acidity
+2 - volatile acidity
+3 - citric acid
+4 - residual sugar
+5 - chlorides
+6 - free sulfur dioxide
+7 - total sulfur dioxide
+8 - density
+9 - pH
+10 - sulphates
+11 - alcohol
+12 - quality (score between 0 and 10)
+
+Dataset: Wine Quality Dataset
+Source: Cortez, Paulo, Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Wine Quality. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T.
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+Accessed on: 20/09/2023
+Adapted by: 
 
 #### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
