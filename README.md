@@ -92,11 +92,39 @@ Accessed on: 20/09/2023
 
 #### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
+
+##### Wine Quality Dataset
+
+Examples:
 | fixed acidity | volatile acidity | citric acid | residual sugar | chlorides | free sulfur dioxide | total sulfur dioxide | density | pH | sulphates | alcohol | quality | wine_name |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------------|------------|------------|------------|
 | 7.4	 | 0.70 | 0.00 | 1.9 | 0.076 | 11.0 | 34.0 | 0.9978 | 3.51 | 0.56 | 9.4	 | 5 | red |
 | 7.8 | 0.88 | 0.00 | 2.6 | 0.098 | 25.0 | 67.0 | 0.9968 | 3.20 | 0.68 | 9.8 | 5 | red |
 
+Format:
+The dataset contains information on various attributes of wines, such as fixed acidity, volatile acidity, citric acid, and more.
+Each wine instance is described by these attributes, and the quality of the wine is rated on a scale of 0 to 10.
+The data is typically organized in a tabular format, with rows representing individual wine samples and columns for each attribute.
+
+##### Fruit 360 Dataset
+
+Examples:
+Image: https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg
+Class: Banana
+Image Size: 100x100 pixels
+Variety: [e.g., Cavendish]
+
+Example 2:
+Image: https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg
+Class: Apple
+Image Size: 100x100 pixels
+Variety: [e.g., Granny Smith]
+
+Format:
+The dataset primarily consists of fruit and vegetable images, with each image corresponding to a specific class.
+Image dimensions are standardized at 100x100 pixels.
+Filenames follow the format "image_index_100.jpg," with variations indicating rotations or modified fruits.
+Different varieties of the same fruit are stored as separate classes.
 
 #### Dataset exploration
 <!-- What is the size of the dataset? -->
