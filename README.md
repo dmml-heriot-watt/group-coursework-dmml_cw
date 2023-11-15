@@ -128,9 +128,20 @@ Different varieties of the same fruit are stored as separate classes.
 
 #### Dataset exploration
 <!-- What is the size of the dataset? -->
+
+##### Wine Quality Dataset
 **Size and Structure**
-- The dataset consists of 6497 entries and 13 features including a Numeric type and a wine_name feature of categorical type.
+- The dataset consists of 6497 entries with 13 features, including numeric type and a categorical feature for wine name.
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
+
+##### Fruit 360 Dataset
+**Size and Structure**
+- The Fruits 360 Dataset includes a total of 90,483 images.
+- The dataset is divided into the following subsets:
+  - Training set: 67,692 images, each featuring a single fruit or vegetable.
+  - Test set: 22,688 images, each showcasing a single fruit or vegetable.
+- There are 131 distinct classes representing different fruits and vegetables. Each image is standardized to a size of 100x100 pixels.
+- Different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
   
 <!-- Train,validation,splits? -->
 **Train, Validation and Split**
