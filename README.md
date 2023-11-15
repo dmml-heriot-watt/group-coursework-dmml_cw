@@ -164,16 +164,47 @@ Different varieties of the same fruit are stored as separate classes.
 -   Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
 
 
-### Clustering
-Implemented K-Means Clustering, used Elbow method and silhouette score to verify number of clusters. 
-#### Experimental design
+### Clustering 
+Implemented K-Means Clustering and EM algorithm, utilizing the Elbow method, silhouette score, and joinplots to select efficient and correlated features for observing the means of each cluster for interpretabilityfor improved accuracy.
+
+**Click to view**
+ - [K Means Algorithm ](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/EM.ipynb) 
+- [EM Algorithm]( https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/K_Means_Clustering.ipynb)
+#### Experimental Design
 <!-- Describe your experimental design and choices for the week. -->
+For the clustering analysis, the following steps were undertaken:
+
+-   **Data Selection:** The entire dataset was initially considered for clustering analysis due to the presence of 9 different quality levels for both K Mean clustering and EM algo.
+-   **Exploratory Clustering:** Applied K-Means Clustering with 9 clusters on all features of the dataset, reflecting the 9 types of wine quality.
+-   **Refinement:** 
+	-  In **K mean** we utilized the Elbow method and silhouette score to identify the optimal number of clusters for improved accuracy.
+	- In **EM algo** we observed joinplots to select features efficiently using Corelation Matrix.
+ 
+-   **Optimal Features Selection:** 
+	- **K Mean-** Selected 'pH' and 'alcohol' as important features based on high correlation and relevance to 'quality.'
+	- **EM algo-** Selected all the feature 'PH', 'alcohol' and 'Fixed Acidity based on relevance of 'quality'.
+	
 
 #### Results
 <!-- Tables showing the results of your experiments -->
+The following are the key results of the clustering analysis:
+
+-   **Exploratory Clustering Results:** The initial choice of 9 clusters aligned with the 9 quality levels, providing a comprehensive view of the dataset. Recognizing the need for feature selection is important for achieving improved accuracy.
+
+-   **Optimal Clustering:** 
+	- **K Mean:** After refining with the Elbow method and silhouette score, the optimal number of clusters was determined to be 4 for all the feature of the dataset, balancing accuracy.
+	- **EM algo:** Observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol.' The selected features were further validated by adding the distributions of quality features.
+	
+-   **Feature Selection Impact:** 
+	- **K Mean:** Upon selecting only 'pH' and 'alcohol,' the silhouette score improved to 0.85 for 3 clusters, enhancing interpretability and the clustering model was trained and tested for comparison purpose with accuracy score of 0.35.
+	- **EM algo:** Even with features that seemed to sparse the dataset according to quality, the EM algorithm isn't efficient for clustering data and predict quality. The mean quality of the clusters is from 5.2 to 6.5.
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
+The iterative approach to clustering involved K-Means and the EM algorithm. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, the initial choice of 9 clusters aligned with the diverse quality levels present in the dataset. After that, we observed that specific feature selection significantly improved the accuracy of the clustering model.
+
+
+
 
 ### Decision Trees
 
