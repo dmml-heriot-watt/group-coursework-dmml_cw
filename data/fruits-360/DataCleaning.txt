@@ -1,0 +1,2 @@
+As the data was huge so we have deleted some varities of fruits so keep data easy to train and test. 
+Data per fruit is same, we have just reduced the number of fruits. 
