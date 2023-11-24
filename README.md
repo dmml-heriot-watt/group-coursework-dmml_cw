@@ -236,16 +236,37 @@ The iterative approach to clustering involved K-Means and the EM algorithm. Whil
 
 ### Neural Networks
 
+The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
+
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
+We consider three types of Neural Networks as an experiment analysis on the dataset
+[Neural Network Implimentation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DeepLearning2.ipynb)
+
+1. ANN (Artificial Neural Network) : We applied a single Dense layer with softmax activation and utilized Adam as the optimizer for the hyperparameters in this model. To evaluate the model's accuracy, we used the accuracy score metric, and the categorical crossentropy was employed as the loss function.
+
+2. ANN with Three Hidden Layers: We implemented a neural network with three Dense layers using ReLU activation functions, followed by an output Dense layer with softmax activation. Adam was employed as the optimizer for the hyperparameters. The model's accuracy was assessed using the accuracy score metric, and categorical crossentropy used as the chosen loss function.
+
+3. CNN (Convolutional Neural Network): We utilized Convolutional layers with MaxPooling, followed by Dense layers and an output layer with softmax activation. Adam was used as the optimizer for the hyperparameters. To assess the model's accuracy, agin we used the accuracy score metric, and categorical crossentropy selected as the loss function.
 
 #### Results
 
 <!-- Tables showing the results of your experiments -->
+The following **Performance Metrics Table** shows the results of the Neural Network analysis:
+     
+     | Model                           | Accuracy Score | Loss   | Precision | Recall | F1-score |
+|---------------------------------|-----------------|--------|-----------|--------|----------|
+| ANN with single Layer           | 0.84            | 3.2849 | 0.89      | 0.84   | 0.84     |
+| ANN with three hidden Layers    | 0.9199          | 0.4830 | 0.92      | 0.92   | 0.91     |
+| CNN                             | 0.96            | 0.2222 | 0.97      | 0.96   | 0.96     |
+
+**Confusion Matrix of CNN** for showing the accuracy of the model..
+[Confusion Matrix of CNN](https://heriotwatt-my.sharepoint.com/:i:/r/personal/pv2008_hw_ac_uk/Documents/CW/Confusion%20Matrix%20CNN.png?csf=1&web=1&e=XusctI)
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
-
+- During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is more accurate for this dataset.
 
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
+The results of our experiments show that a Convolutional Neural Network (CNN) performs better than other types of models when applied to the Fruit-360 dataset. This indicates that the design of the neural network structure has a big impact on how well the model works. It emphasizes that trying out different designs is crucial to finding the best setup for a particular dataset.
