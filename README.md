@@ -54,8 +54,11 @@ Wiki for maintain weekly task of the project
 <!-- What questions you are trying to answer? -->
 
 ### Datasets
-1. Wine Quality Dataset - https://doi.org/10.24432/C56S3T
-2. Fruit 360 Dataset - https://www.kaggle.com/datasets/moltean/fruits
+1. Wine Quality Dataset:
+   The Wine Quality dataset was sourced from the UCI Machine Learning Repository - [Wine Quality](https://doi.org/10.24432/C56S3T)
+   
+3. Fruit 360 Dataset
+   The Fruit 360 Dataset was sourced from the Kaggle - [Fruit 360](https://www.kaggle.com/datasets/moltean/fruits)
 
 #### Dataset description
 
@@ -108,14 +111,14 @@ The data is typically organized in a tabular format, with rows representing indi
 
 ##### Fruit 360 Dataset
 
-Examples:
-Image: https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg
+Examples 1:
+Image: [Cavendish](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg)
 Class: Banana
 Image Size: 100x100 pixels
 Variety: [e.g., Cavendish]
 
 Example 2:
-Image: https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg
+Image: [Granny Smith](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg)
 Class: Apple
 Image Size: 100x100 pixels
 Variety: [e.g., Granny Smith]
@@ -146,6 +149,19 @@ Different varieties of the same fruit are stored as separate classes.
 <!-- Train,validation,splits? -->
 **Train, Validation and Split**
 <!-- Summary statistics of your dataset -->
+|               | Fixed Acidity | Volatile Acidity | Citric Acid | Residual Sugar | Chlorides | Free Sulfur Dioxide | Total Sulfur Dioxide | Density | pH   | Sulphates | Alcohol | Quality |
+|-----------------------|---------------|------------------|-------------|----------------|-----------|---------------------|----------------------|---------|------|-----------|---------|---------|
+| Count                 | 6497          | 6497             | 6497        | 6497           | 6497      | 6497                | 6497                 | 6497    | 6497 | 6497      | 6497    | 6497    |
+| Mean                  | 7.215         | 0.340            | 0.319       | 5.443          | 0.056     | 30.525              | 115.745              | 0.995   | 3.219| 0.531     | 10.492  | 5.818   |
+| Std Dev               | 1.296         | 0.165            | 0.145       | 4.758          | 0.035     | 17.749              | 56.522               | 0.003   | 0.161| 0.149     | 1.193   | 0.873   |
+| Min                   | 3.800         | 0.080            | 0.000       | 0.600          | 0.009     | 1.000               | 6.000                | 0.987   | 2.720| 0.220     | 8.000   | 3.000   |
+| 25th Percentile      | 6.400         | 0.230            | 0.250       | 1.800          | 0.038     | 17.000              | 77.000               | 0.992   | 3.110| 0.430     | 9.500   | 5.000   |
+| Median                | 7.000         | 0.290            | 0.310       | 3.000          | 0.047     | 29.000              | 118.000              | 0.995   | 3.210| 0.510     | 10.300  | 6.000   |
+| 75th Percentile      | 7.700         | 0.400            | 0.390       | 8.100          | 0.065     | 41.000              | 156.000              | 0.997   | 3.320| 0.600     | 11.300  | 6.000   |
+| Max                   | 15.900        | 1.580            | 1.660       | 65.800         | 0.611     | 289.000             | 440.000              | 1.039   | 4.010| 2.000     | 14.900  | 9.000   |
+
+
+
 <!-- Visualisations of your dataset -->
 <!-- Analysis of your dataset -->
 
