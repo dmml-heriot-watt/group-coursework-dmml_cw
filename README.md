@@ -60,7 +60,7 @@ Wiki for maintain weekly task of the project
 3. Fruit 360 Dataset
    The Fruit 360 Dataset was sourced from the Kaggle - [Fruit 360](https://www.kaggle.com/datasets/moltean/fruits)
 
-#### Dataset description
+### Dataset description
 
 ##### Wine Quality Dataset
 The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, including attributes like acidity, pH, alcohol content, and more. Each wine is associated with a quality rating. The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. This task involves data preprocessing, and model building using Python and scikit-learn.
@@ -85,7 +85,6 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 Accessed on: 20/09/2023
 
 ##### Fruit 360 Dataset
-
 Fruits 360 dataset is a dataset that contains images of different fruits. These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. The Fruit Dataset is a valuable resource tailored for neural networks. This dataset serves multiple purposes, including classification and regression tasks. It is used for performance assessment, measuring metrics like accuracy, precision, recall, and F-score.
 
 Dataset: Fruit 360 Dataset
@@ -93,11 +92,10 @@ Source: Horea Muresan and Mihai Oltean. Fruits 360. Kaggle. https://www.kaggle.c
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 Accessed on: 20/09/2023
 
-#### Dataset examples
+### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
 
 ##### Wine Quality Dataset
-
 Examples:
 | fixed acidity | volatile acidity | citric acid | residual sugar | chlorides | free sulfur dioxide | total sulfur dioxide | density | pH | sulphates | alcohol | quality | wine_name |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------------|------------|------------|------------|
@@ -110,7 +108,6 @@ Each wine instance is described by these attributes, and the quality of the wine
 The data is typically organized in a tabular format, with rows representing individual wine samples and columns for each attribute.
 
 ##### Fruit 360 Dataset
-
 Examples 1:
 Image: [Cavendish](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg)
 Class: Banana
@@ -129,16 +126,14 @@ Image dimensions are standardized at 100x100 pixels.
 Filenames follow the format "image_index_100.jpg," with variations indicating rotations or modified fruits.
 Different varieties of the same fruit are stored as separate classes.
 
-#### Dataset exploration
+### Dataset Size and Structure
 <!-- What is the size of the dataset? -->
 
 ##### Wine Quality Dataset
-**Size and Structure**
 - The dataset consists of 6497 entries with 13 features, including numeric type and a categorical feature for wine name.
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
 
 ##### Fruit 360 Dataset
-**Size and Structure**
 - The Fruits 360 Dataset includes a total of 90,483 images.
 - The dataset is divided into the following subsets:
   - Training set: 67,692 images, each featuring a single fruit or vegetable.
@@ -146,9 +141,9 @@ Different varieties of the same fruit are stored as separate classes.
 - There are 131 distinct classes representing different fruits and vegetables. Each image is standardized to a size of 100x100 pixels.
 - Different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
   
-<!-- Train,validation,splits? -->
-**Train, Validation and Split**
+### Dataset Summary Statistics
 <!-- Summary statistics of your dataset -->
+
 |               | Fixed Acidity | Volatile Acidity | Citric Acid | Residual Sugar | Chlorides | Free Sulfur Dioxide | Total Sulfur Dioxide | Density | pH   | Sulphates | Alcohol | Quality |
 |-----------------------|---------------|------------------|-------------|----------------|-----------|---------------------|----------------------|---------|------|-----------|---------|---------|
 | Count                 | 6497          | 6497             | 6497        | 6497           | 6497      | 6497                | 6497                 | 6497    | 6497 | 6497      | 6497    | 6497    |
@@ -160,13 +155,11 @@ Different varieties of the same fruit are stored as separate classes.
 | 75th Percentile      | 7.700         | 0.400            | 0.390       | 8.100          | 0.065     | 41.000              | 156.000              | 0.997   | 3.320| 0.600     | 11.300  | 6.000   |
 | Max                   | 15.900        | 1.580            | 1.660       | 65.800         | 0.611     | 289.000             | 440.000              | 1.039   | 4.010| 2.000     | 14.900  | 9.000   |
 
-
-
+### Dataset Visualisation
 <!-- Visualisations of your dataset -->
-<!-- Analysis of your dataset -->
 
-##### Data Visualization 
-**Insights from wine dataset:**
+##### Click to view 
+- [Visualisation](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
 -   There are no missing values in the dataset.
 -   Some observations from the summary statistics:
     -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
@@ -179,6 +172,8 @@ Different varieties of the same fruit are stored as separate classes.
 -   Total sulfur dioxide and free sulfur dioxide have a very strong correlation (0.72), so only one of these features should be selected during feature reduction.
 -   Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
 
+### Dataset Analysis
+<!-- Analysis of your dataset -->
 
 ### Clustering 
 Implemented K-Means Clustering and EM algorithm, utilizing the Elbow method, silhouette score, and joinplots to select efficient and correlated features for observing the means of each cluster for interpretabilityfor improved accuracy.
