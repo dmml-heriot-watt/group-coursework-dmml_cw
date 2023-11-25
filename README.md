@@ -21,24 +21,21 @@
 ## Initial Project Proposal
 
 > [!NOTE]
->Wine Dataset
-1. Decision tree to find which wine has best quality .
-2. Clustering based on quality or chemical properties like alcohol, sugar,  acid content etc .
-
->Fruit Dataset
-1. For Neural Networks and CNN
-2. Classification or Regression    
-3. Performance Assessment: to measure accuracy, precision, recall, F score etc.
-4. Generalization: to make accurate prediction for new data
-5. Optimization: to achieve the best possible performance by adjusting parameters
+This project aims to explore the fields of computer vision and viticulture by conducting a comprehensive analysis of fruit image classification and wine quality prediction. For the wine dataset, we plan to apply clustering techniques based on quality and chemical properties such as alcohol content, sugar levels, and acid concentrations. Additionally, decision tree algorithms will be employed to identify the key features contributing to the best wine quality. In the fruit dataset, the focus will shift towards the application of neural networks and convolutional neural networks (CNNs) for image classification. The primary goal is to perform image classification and assess the performance using metrics such as accuracy, precision, recall, and F-score.
 
 ## Project Planning
-Wiki for maintain weekly task of the project
-- [Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
+We'll make use of GitHub's collaborative features, such as issue tracking, version control, and a dedicated wiki, to organise project tasks and documentation in a way that will facilitate effective development and teamwork.
+- **Click to view -** [Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
+  
 ### Research objectives
 
 > [!NOTE]
 > What are the questions you are trying to answer? What are the goals of your project?
+The objectives of this project are:
+> Apply clustering techniques on wine data based on quality and chemical properties.
+> Identify key features contributing to the best wine quality using decision tree algorithms.
+> Develop effective image classification models for fruit recognition using neural networks and CNNs.
+> Assess model performance using metrics like accuracy, precision, recall, and F-score.
 
 ### Milestones
 
