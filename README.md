@@ -54,92 +54,67 @@ Wiki for maintain weekly task of the project
 <!-- What questions you are trying to answer? -->
 
 ### Datasets
-1. Wine Quality Dataset:
-   The Wine Quality dataset was sourced from the UCI Machine Learning Repository - [Wine Quality](https://doi.org/10.24432/C56S3T)
-   
-3. Fruit 360 Dataset
-   The Fruit 360 Dataset was sourced from the Kaggle - [Fruit 360](https://www.kaggle.com/datasets/moltean/fruits)
+1.  **Wine Quality Dataset:**
+    
+    -   **Source:** UCI Machine Learning Repository - [Wine Quality](https://doi.org/10.24432/C56S3T)
+    -   **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+    -   **Ethical Considerations:** No privacy or logistic issues, and the dataset is openly shared for any purpose with appropriate credit given. 
+    
+2.  **Fruit 360 Dataset:**
+    
+    -   **Source:** Kaggle - [Fruit 360](https://www.kaggle.com/datasets/moltean/fruits)
+    -   **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+    -   **Ethical Considerations:** No privacy or logistic issues with this dataset as the dataset contains only images of fruits without any human or brand-related aspects.
 
 ### Dataset description
 
 ##### Wine Quality Dataset
-The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, including attributes like acidity, pH, alcohol content, and more. Each wine is associated with a quality rating. The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. This task involves data preprocessing, and model building using Python and scikit-learn.
+**Objective:** The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. 
 
-Additional Variable Information
-1 - fixed acidity
-2 - volatile acidity
-3 - citric acid
-4 - residual sugar
-5 - chlorides
-6 - free sulfur dioxide
-7 - total sulfur dioxide
-8 - density
-9 - pH
-10 - sulphates
-11 - alcohol
-12 - quality (score between 0 and 10)
-
-Dataset: Wine Quality Dataset
-Source: Cortez, Paulo, Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Wine Quality. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T.
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
-Accessed on: 20/09/2023
-
+The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, example below shows the information about the attributes and the data of this dataset.
+  
 ##### Fruit 360 Dataset
-Fruits 360 dataset is a dataset that contains images of different fruits. These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. The Fruit Dataset is a valuable resource tailored for neural networks. This dataset serves multiple purposes, including classification and regression tasks. It is used for performance assessment, measuring metrics like accuracy, precision, recall, and F-score.
+**Objective:** This dataset is used for neural network tasks, including classification and regression.
 
-Dataset: Fruit 360 Dataset
-Source: Horea Muresan and Mihai Oltean. Fruits 360. Kaggle. https://www.kaggle.com/datasets/moltean/fruits.
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
-Accessed on: 20/09/2023
+Fruits 360 dataset is a dataset that contains images of different fruits with 100 * 100 pixel dimension . These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. 
 
 ### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
 
 ##### Wine Quality Dataset
-Examples:
+The data is typically organized in a tabular format, with rows representing individual wine samples and columns for each attribute.
 | fixed acidity | volatile acidity | citric acid | residual sugar | chlorides | free sulfur dioxide | total sulfur dioxide | density | pH | sulphates | alcohol | quality | wine_name |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------------|------------|------------|------------|
 | 7.4	 | 0.70 | 0.00 | 1.9 | 0.076 | 11.0 | 34.0 | 0.9978 | 3.51 | 0.56 | 9.4	 | 5 | red |
 | 7.8 | 0.88 | 0.00 | 2.6 | 0.098 | 25.0 | 67.0 | 0.9968 | 3.20 | 0.68 | 9.8 | 5 | red |
 
-Format:
-The dataset contains information on various attributes of wines, such as fixed acidity, volatile acidity, citric acid, and more.
-Each wine instance is described by these attributes, and the quality of the wine is rated on a scale of 0 to 10.
-The data is typically organized in a tabular format, with rows representing individual wine samples and columns for each attribute.
 
 ##### Fruit 360 Dataset
-Examples 1:
-Image: [Cavendish](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg)
-Class: Banana
-Image Size: 100x100 pixels
-Variety: [e.g., Cavendish]
+The dataset primarily consists of fruit images with dimention of 100x100 pixels, with each image corresponding to a specific class and different varieties of the same fruit are stored as separate classes.
+- Examples 1:
+> Image: [Cavendish](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg)
+> Class: Banana
+> Image Size: 100x100 pixels
+> Variety: [e.g., Cavendish]
 
-Example 2:
-Image: [Granny Smith](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg)
-Class: Apple
-Image Size: 100x100 pixels
-Variety: [e.g., Granny Smith]
-
-Format:
-The dataset primarily consists of fruit and vegetable images, with each image corresponding to a specific class.
-Image dimensions are standardized at 100x100 pixels.
-Filenames follow the format "image_index_100.jpg," with variations indicating rotations or modified fruits.
-Different varieties of the same fruit are stored as separate classes.
+- Example 2:
+> Image: [Granny Smith](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg)
+> Class: Apple
+> Image Size: 100x100 pixels
+> Variety: [e.g., Granny Smith]
 
 ### Dataset Size and Structure
 <!-- What is the size of the dataset? -->
-
 ##### Wine Quality Dataset
 - The dataset consists of 6497 entries with 13 features, including numeric type and a categorical feature for wine name.
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
-
+- 
 ##### Fruit 360 Dataset
 - The Fruits 360 Dataset includes a total of 90,483 images.
 - The dataset is divided into the following subsets:
   - Training set: 67,692 images, each featuring a single fruit or vegetable.
   - Test set: 22,688 images, each showcasing a single fruit or vegetable.
-- There are 131 distinct classes representing different fruits and vegetables. Each image is standardized to a size of 100x100 pixels.
-- Different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
+- There are 131 distinct classes representing different fruits and different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
   
 ### Dataset Summary Statistics
 <!-- Summary statistics of your dataset -->
@@ -158,8 +133,7 @@ Different varieties of the same fruit are stored as separate classes.
 ### Dataset Visualisation
 <!-- Visualisations of your dataset -->
 
-##### Click to view 
-- [Visualisation](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
+**Click to view :**  [Visualisation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
 -   There are no missing values in the dataset.
 -   Some observations from the summary statistics:
     -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
@@ -175,6 +149,10 @@ Different varieties of the same fruit are stored as separate classes.
 ### Dataset Analysis
 <!-- Analysis of your dataset -->
 
+-  There is no missing value in this dataset to handle 
+- Identified outliers in certain features in the dataset.
+- Click to view [Correlation Matrix](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fcorrelation%20matrix%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+  
 ### Clustering 
 The mixed dataset of wine, a combination of the "Red Wine Dataset" and "White Wine Dataset," was utilized for implementing clustering algorithms. The primary objective was to observe clear clusters corresponding to the 9 wine quality levels. Initially, all features of the dataset were considered as input to determine the best clusters for predicting wine quality. Subsequently, after implementing various approaches, a selection of features from the dataset, specifically pH and Alcohol, was selected to achieve more efficient clustering results.
 
