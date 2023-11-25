@@ -176,45 +176,46 @@ Different varieties of the same fruit are stored as separate classes.
 <!-- Analysis of your dataset -->
 
 ### Clustering 
-Implemented K-Means Clustering and EM algorithm, utilizing the Elbow method, silhouette score, and joinplots to select efficient and correlated features for observing the means of each cluster for interpretabilityfor improved accuracy.
+The mixed dataset of wine, a combination of the "Red Wine Dataset" and "White Wine Dataset," was utilized for implementing clustering algorithms. The primary objective was to observe clear clusters corresponding to the 9 wine quality levels. Initially, all features of the dataset were considered as input to determine the best clusters for predicting wine quality. Subsequently, after implementing various approaches, a selection of features from the dataset, specifically pH and Alcohol, was selected to achieve more efficient clustering results.
 
-**Click to view**
- - [K Means Algorithm ](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/EM.ipynb) 
-- [EM Algorithm]( https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/K_Means_Clustering.ipynb)
 #### Experimental Design
 <!-- Describe your experimental design and choices for the week. -->
-For the clustering analysis, the following steps were undertaken:
+We consider two types of Clustering Algorithms as an experiment analysis of clustering on the Wine dataset.
 
--   **Data Selection:** The entire dataset was initially considered for clustering analysis due to the presence of 9 different quality levels for both K Mean clustering and EM algo.
--   **Exploratory Clustering:** Applied K-Means Clustering with 9 clusters on all features of the dataset, reflecting the 9 types of wine quality.
--   **Refinement:** 
-	-  In **K mean** we utilized the Elbow method and silhouette score to identify the optimal number of clusters for improved accuracy.
-	- In **EM algo** we observed joinplots to select features efficiently using Corelation Matrix.
- 
--   **Optimal Features Selection:** 
-	- **K Mean-** Selected 'pH' and 'alcohol' as important features based on high correlation and relevance to 'quality.'
-	- **EM algo-** Selected all the feature 'PH', 'alcohol' and 'Fixed Acidity based on relevance of 'quality'.
-	
+**Click to view :**
+ - [K Means Algorithm Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/K_Means_Clustering_withScore.ipynb) 
+- [EM Algorithm Notebook]( https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/EM.ipynb)
+
+1.  **K-means Clustering:**  
+	-  **9-cluster K-means Clustering with all features:** Initially, clustering was attempted with 9 clusters representing the wine quality levels. We used all the feature of the dataset as an input and also calculated homogeneity score and completeness score for this cluster. We implimented Elbow Method and silhouette score to identify optimum number of cluster for this dataset.
+	-  **4-cluster K-means Clustering with all Features:**  As we got highest value of silhouette score for 4 number of cluster in initial implimentation stage , we applied 4 cluster K-means clustering including all the feature of the dataset and we also calculated homogeneity score and completeness score for this cluster.We again implimented Elbow method and silhouette score for this cluster as well.
+	- **3-cluster K-means clustering with selected Features:** By considering result from above two cluster selection we moved to Feature selection for getting batter quality of cluster so, Feature selection of pH and alcohol was performed based on a correlation matrix and pair plot analysis. Clustering was then performed using K-means with 3 clusters on the selected features (pH and alcohol). We perform elbow method and silhouette score with homogeneity score and completeness score for this cluster. 
+2.  **Expectation-Maximization (EM) Algorithm:**  - The EM algorithm was applied to the dataset, considering all features. We observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol' to assess the efficiency of clustering where we could try to extract different cluster that would help us predict the quality of a wine. 
 
 #### Results
 <!-- Tables showing the results of your experiments -->
-The following are the key results of the clustering analysis:
+The following **Score Table ** shows the key results of the clustering analysis:
+| Clustering Technique                        | Homogeneity Score | Completeness Score | Optimal k (Elbow Method) | Average Silhouette Score |
+|--------------------------------------------|-------------------|--------------------|--------------------------|---------------------------|
+| 9-cluster K-means Clustering (All Features) | 0.41              | 0.24               | Not Clear                | 0.24537          |
+| 4-cluster K-means Clustering (All Features) | 0.1857            | 0.0974             | Not Clear                | 0.2453                    |
+| 3-cluster K-means Clustering (Selected Features) | 0.1448       | 0.0398             | 3                        | 0.85                      |
 
--   **Exploratory Clustering Results:** The initial choice of 9 clusters aligned with the 9 quality levels, providing a comprehensive view of the dataset. Recognizing the need for feature selection is important for achieving improved accuracy.
+**EM Algorithm:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency.
 
--   **Optimal Clustering:** 
-	- **K Mean:** After refining with the Elbow method and silhouette score, the optimal number of clusters was determined to be 4 for all the feature of the dataset, balancing accuracy.
-	- **EM algo:** Observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol.' The selected features were further validated by adding the distributions of quality features.
-	
--   **Feature Selection Impact:** 
-	- **K Mean:** Upon selecting only 'pH' and 'alcohol,' the silhouette score improved to 0.85 for 3 clusters, enhancing interpretability and the clustering model was trained and tested for comparison purpose with accuracy score of 0.35.
-	- **EM algo:** Even with features that seemed to sparse the dataset according to quality, the EM algorithm isn't efficient for clustering data and predict quality. The mean quality of the clusters is from 5.2 to 6.5.
+- Hyperparameter variations were explored for the number of clusters (k) in the K-means algorithm.
+- Variations helped in selecting an appropriate number of clusters based on the silhouette score.
+
+**Elbow Method** for selecting optimal number of cluster.
+[Elbow of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Felbow%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+**Silhouette coefficient Method** for selecting appropriate number of cluster
+[Silhouette Score of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fsilhoutte%20score%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+**Joinplots** to access efficiency of cluster
+[Join plots for EM algorithm using selected feature )](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fjoinplot%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
-The iterative approach to clustering involved K-Means and the EM algorithm. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, the initial choice of 9 clusters aligned with the diverse quality levels present in the dataset. After that, we observed that specific feature selection significantly improved the accuracy of the clustering model.
-
-
+The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. Hyperparameter variations played a crucial role in selecting the right number of clusters for the chosen features. Variations in number of clusters helped in selecting an appropriate number of clusters based on the silhouette score.
 
 
 ### Decision Trees
@@ -231,12 +232,13 @@ The iterative approach to clustering involved K-Means and the EM algorithm. Whil
 
 ### Neural Networks
 
-The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
+The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
 
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
 We consider three types of Neural Networks as an experiment analysis on the dataset
-[Neural Network Implimentation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DeepLearning2.ipynb)
+
+**Click to view :** [Neural Network Implimentation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DeepLearning2.ipynb)
 
 1. ANN (Artificial Neural Network) : We applied a single Dense layer with softmax activation and utilized Adam as the optimizer for the hyperparameters in this model. To evaluate the model's accuracy, we used the accuracy score metric, and the categorical crossentropy was employed as the loss function.
 
@@ -249,19 +251,20 @@ We consider three types of Neural Networks as an experiment analysis on the data
 <!-- Tables showing the results of your experiments -->
 The following **Performance Metrics Table** shows the results of the Neural Network analysis:
      
-     | Model                           | Accuracy Score | Loss   | Precision | Recall | F1-score |
-|---------------------------------|-----------------|--------|-----------|--------|----------|
-| ANN with single Layer           | 0.84            | 3.2849 | 0.89      | 0.84   | 0.84     |
-| ANN with three hidden Layers    | 0.9199          | 0.4830 | 0.92      | 0.92   | 0.91     |
-| CNN                             | 0.96            | 0.2222 | 0.97      | 0.96   | 0.96     |
+ | Model                        | Accuracy Score | Loss   | Precision | Recall | F1-score |
+| ---------------------------- | --------------- | ------ | --------- | ------ | -------- |
+| ANN with single Layer        | 0.84            | 3.2849 | 0.89      | 0.84   | 0.84     |
+| ANN with three hidden Layers | 0.9199          | 0.4830 | 0.92      | 0.92   | 0.91     |
+| CNN                          | 0.96            | 0.2222 | 0.97      | 0.96   | 0.96     |
 
 **Confusion Matrix of CNN** for showing the accuracy of the model..
+
 [Confusion Matrix of CNN](https://heriotwatt-my.sharepoint.com/:i:/r/personal/pv2008_hw_ac_uk/Documents/CW/Confusion%20Matrix%20CNN.png?csf=1&web=1&e=XusctI)
 
 #### Discussion
-<!-- A brief discussion on the results of your experiment -->
 - During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is more accurate for this dataset.
+- The results of our experiments show that a Convolutional Neural Network (CNN) performs better than other types of models when applied to the Fruit-360 dataset. This indicates that the design of the neural network structure has a big impact on how well the model works. It emphasizes that trying out different designs is crucial to finding the best setup for a particular dataset.
 
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
-The results of our experiments show that a Convolutional Neural Network (CNN) performs better than other types of models when applied to the Fruit-360 dataset. This indicates that the design of the neural network structure has a big impact on how well the model works. It emphasizes that trying out different designs is crucial to finding the best setup for a particular dataset.
+
