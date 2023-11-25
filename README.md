@@ -91,29 +91,24 @@ The data is typically organized in a tabular format, with rows representing indi
 
 ##### Fruit 360 Dataset
 The dataset primarily consists of fruit images with dimention of 100x100 pixels, with each image corresponding to a specific class and different varieties of the same fruit are stored as separate classes.
-- Examples 1:
-> Image: [Cavendish](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg)
-> Class: Banana
-> Image Size: 100x100 pixels
-> Variety: [e.g., Cavendish]
-
-- Example 2:
-> Image: [Granny Smith](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg)
-> Class: Apple
-> Image Size: 100x100 pixels
-> Variety: [e.g., Granny Smith]
+| Example | 1                                       | 2                                                                     |
+|---------|-----------------------------------------|-----------------------------------------------------------------------|
+| Image   | [Cavendish](.../Banana/100_100.jpg)     | [Granny Smith](.../Apple%20Granny%20Smith/323_100.jpg)              |
+| Class   | Banana                                  | Apple                                                                 |
+| Size    | 100x100 pixels                          | 100x100 pixels                                                        |
+| Variety | [e.g., Cavendish]                       | [e.g., Granny Smith]                                                  |
 
 ### Dataset Size and Structure
 <!-- What is the size of the dataset? -->
 ##### Wine Quality Dataset
 - The dataset consists of 6497 entries with 13 features, including numeric type and a categorical feature for wine name.
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
-- 
+  
 ##### Fruit 360 Dataset
 - The Fruits 360 Dataset includes a total of 90,483 images.
 - The dataset is divided into the following subsets:
-  - Training set: 67,692 images, each featuring a single fruit or vegetable.
-  - Test set: 22,688 images, each showcasing a single fruit or vegetable.
+  - Training set: 67,692 images, each featuring a single fruit.
+  - Test set: 22,688 images, each showcasing a single fruit.
 - There are 131 distinct classes representing different fruits and different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
   
 ### Dataset Summary Statistics
@@ -135,6 +130,7 @@ The dataset primarily consists of fruit images with dimention of 100x100 pixels,
 
 **Click to view :**  [Visualisation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
 -   There are no missing values in the dataset.
+-   - Click to view [Correlation Matrix](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fcorrelation%20matrix%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
 -   Some observations from the summary statistics:
     -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
     -   Residual sugar: The mean is 5.44, the median is 3, and the max value is 65.8, indicating the presence of outliers and right skewness. The standard deviation is high, indicating a variety of sugar levels in different wines.
@@ -150,9 +146,8 @@ The dataset primarily consists of fruit images with dimention of 100x100 pixels,
 <!-- Analysis of your dataset -->
 
 -  There is no missing value in this dataset to handle 
-- Identified outliers in certain features in the dataset.
-- Click to view [Correlation Matrix](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fcorrelation%20matrix%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
-  
+-  Identified outliers in certain features in the dataset.
+
 ### Clustering 
 The mixed dataset of wine, a combination of the "Red Wine Dataset" and "White Wine Dataset," was utilized for implementing clustering algorithms. The primary objective was to observe clear clusters corresponding to the 9 wine quality levels. Initially, all features of the dataset were considered as input to determine the best clusters for predicting wine quality. Subsequently, after implementing various approaches, a selection of features from the dataset, specifically pH and Alcohol, was selected to achieve more efficient clustering results.
 
