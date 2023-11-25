@@ -44,6 +44,20 @@ Wiki for maintain weekly task of the project
 
 > [!NOTE]
 > Create a bullet list of the key milestones for your project. Discuss these with your group. You may need to update these as the project progresses.
+> Milestone of this project.
+
+| Task                                      | Start Date | End Date   | Duration | Week |
+|-------------------------------------------|------------|------------|----------|---------|
+| 1. Define Project Topic | 18/09/2023 | 24/09/2023 | 7 days   | [Week-2](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week2.md) |
+| 2. Find Dataset related to the topic                      | 25/09/2023 | 01/10/2023 | 7 days   | [Week-3](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week3.md) |
+| 3. Data Visualisation and Analysis                | 02/10/2023 | 08/10/2023 | 7 days   | [Week-4](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week4.md)
+| 4. Clustering               | 09/10/2023 | 15/10/2023 | 7 days   | [week-5](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week5.md) |
+| 5. Conclusion of Clustering                    | 16/10/2023 | 22/10/2023 | 7 days   | [Week-6](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week6.md) |
+| 6. Decision Tree                        | 23/10/2023 | 29/10/2023 | 7 days   | [Week-7](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week7.md) |
+| 7. Conclusion of Decision Tree           | 30/10/2023 | 05/11/2023 | 7 days   | [Week-8](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week8.md) |
+| 8. Neural Network               | 06/11/2023 | 12/11/2023 | 7 days   | [Week-9](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week9.md) |
+| 9. Conclusion of Neural Network                          | 13/11/2023 | 19/11/2023 | 7 days   | [Week-10](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week10.md) |
+| 10. Final Documentation and Presentation                        | 20/11/2023 | 26/11/2023 | 7 days   | [Week-11](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki/Week11.md) |
 
 
 ## Findings Report
