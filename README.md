@@ -54,10 +54,13 @@ Wiki for maintain weekly task of the project
 <!-- What questions you are trying to answer? -->
 
 ### Datasets
-1. Wine Quality Dataset - https://doi.org/10.24432/C56S3T
-2. Fruit 360 Dataset - https://www.kaggle.com/datasets/moltean/fruits
+1. Wine Quality Dataset:
+   The Wine Quality dataset was sourced from the UCI Machine Learning Repository - [Wine Quality](https://doi.org/10.24432/C56S3T)
+   
+3. Fruit 360 Dataset
+   The Fruit 360 Dataset was sourced from the Kaggle - [Fruit 360](https://www.kaggle.com/datasets/moltean/fruits)
 
-#### Dataset description
+### Dataset description
 
 ##### Wine Quality Dataset
 The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, including attributes like acidity, pH, alcohol content, and more. Each wine is associated with a quality rating. The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. This task involves data preprocessing, and model building using Python and scikit-learn.
@@ -82,7 +85,6 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 Accessed on: 20/09/2023
 
 ##### Fruit 360 Dataset
-
 Fruits 360 dataset is a dataset that contains images of different fruits. These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. The Fruit Dataset is a valuable resource tailored for neural networks. This dataset serves multiple purposes, including classification and regression tasks. It is used for performance assessment, measuring metrics like accuracy, precision, recall, and F-score.
 
 Dataset: Fruit 360 Dataset
@@ -90,11 +92,10 @@ Source: Horea Muresan and Mihai Oltean. Fruits 360. Kaggle. https://www.kaggle.c
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 Accessed on: 20/09/2023
 
-#### Dataset examples
+### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
 
 ##### Wine Quality Dataset
-
 Examples:
 | fixed acidity | volatile acidity | citric acid | residual sugar | chlorides | free sulfur dioxide | total sulfur dioxide | density | pH | sulphates | alcohol | quality | wine_name |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------------|------------|------------|------------|
@@ -107,15 +108,14 @@ Each wine instance is described by these attributes, and the quality of the wine
 The data is typically organized in a tabular format, with rows representing individual wine samples and columns for each attribute.
 
 ##### Fruit 360 Dataset
-
-Examples:
-Image: https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg
+Examples 1:
+Image: [Cavendish](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Banana/100_100.jpg)
 Class: Banana
 Image Size: 100x100 pixels
 Variety: [e.g., Cavendish]
 
 Example 2:
-Image: https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg
+Image: [Granny Smith](https://github.com/Horea94/Fruit-Images-Dataset/blob/master/Test/Apple%20Granny%20Smith/323_100.jpg)
 Class: Apple
 Image Size: 100x100 pixels
 Variety: [e.g., Granny Smith]
@@ -126,16 +126,14 @@ Image dimensions are standardized at 100x100 pixels.
 Filenames follow the format "image_index_100.jpg," with variations indicating rotations or modified fruits.
 Different varieties of the same fruit are stored as separate classes.
 
-#### Dataset exploration
+### Dataset Size and Structure
 <!-- What is the size of the dataset? -->
 
 ##### Wine Quality Dataset
-**Size and Structure**
 - The dataset consists of 6497 entries with 13 features, including numeric type and a categorical feature for wine name.
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
 
 ##### Fruit 360 Dataset
-**Size and Structure**
 - The Fruits 360 Dataset includes a total of 90,483 images.
 - The dataset is divided into the following subsets:
   - Training set: 67,692 images, each featuring a single fruit or vegetable.
@@ -143,14 +141,25 @@ Different varieties of the same fruit are stored as separate classes.
 - There are 131 distinct classes representing different fruits and vegetables. Each image is standardized to a size of 100x100 pixels.
 - Different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
   
-<!-- Train,validation,splits? -->
-**Train, Validation and Split**
+### Dataset Summary Statistics
 <!-- Summary statistics of your dataset -->
-<!-- Visualisations of your dataset -->
-<!-- Analysis of your dataset -->
 
-##### Data Visualization 
-**Insights from wine dataset:**
+|               | Fixed Acidity | Volatile Acidity | Citric Acid | Residual Sugar | Chlorides | Free Sulfur Dioxide | Total Sulfur Dioxide | Density | pH   | Sulphates | Alcohol | Quality |
+|-----------------------|---------------|------------------|-------------|----------------|-----------|---------------------|----------------------|---------|------|-----------|---------|---------|
+| Count                 | 6497          | 6497             | 6497        | 6497           | 6497      | 6497                | 6497                 | 6497    | 6497 | 6497      | 6497    | 6497    |
+| Mean                  | 7.215         | 0.340            | 0.319       | 5.443          | 0.056     | 30.525              | 115.745              | 0.995   | 3.219| 0.531     | 10.492  | 5.818   |
+| Std Dev               | 1.296         | 0.165            | 0.145       | 4.758          | 0.035     | 17.749              | 56.522               | 0.003   | 0.161| 0.149     | 1.193   | 0.873   |
+| Min                   | 3.800         | 0.080            | 0.000       | 0.600          | 0.009     | 1.000               | 6.000                | 0.987   | 2.720| 0.220     | 8.000   | 3.000   |
+| 25th Percentile      | 6.400         | 0.230            | 0.250       | 1.800          | 0.038     | 17.000              | 77.000               | 0.992   | 3.110| 0.430     | 9.500   | 5.000   |
+| Median                | 7.000         | 0.290            | 0.310       | 3.000          | 0.047     | 29.000              | 118.000              | 0.995   | 3.210| 0.510     | 10.300  | 6.000   |
+| 75th Percentile      | 7.700         | 0.400            | 0.390       | 8.100          | 0.065     | 41.000              | 156.000              | 0.997   | 3.320| 0.600     | 11.300  | 6.000   |
+| Max                   | 15.900        | 1.580            | 1.660       | 65.800         | 0.611     | 289.000             | 440.000              | 1.039   | 4.010| 2.000     | 14.900  | 9.000   |
+
+### Dataset Visualisation
+<!-- Visualisations of your dataset -->
+
+##### Click to view 
+- [Visualisation](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
 -   There are no missing values in the dataset.
 -   Some observations from the summary statistics:
     -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
@@ -163,6 +172,8 @@ Different varieties of the same fruit are stored as separate classes.
 -   Total sulfur dioxide and free sulfur dioxide have a very strong correlation (0.72), so only one of these features should be selected during feature reduction.
 -   Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
 
+### Dataset Analysis
+<!-- Analysis of your dataset -->
 
 ### Clustering 
 Implemented K-Means Clustering and EM algorithm, utilizing the Elbow method, silhouette score, and joinplots to select efficient and correlated features for observing the means of each cluster for interpretabilityfor improved accuracy.
@@ -220,16 +231,37 @@ The iterative approach to clustering involved K-Means and the EM algorithm. Whil
 
 ### Neural Networks
 
+The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
+
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
+We consider three types of Neural Networks as an experiment analysis on the dataset
+[Neural Network Implimentation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DeepLearning2.ipynb)
+
+1. ANN (Artificial Neural Network) : We applied a single Dense layer with softmax activation and utilized Adam as the optimizer for the hyperparameters in this model. To evaluate the model's accuracy, we used the accuracy score metric, and the categorical crossentropy was employed as the loss function.
+
+2. ANN with Three Hidden Layers: We implemented a neural network with three Dense layers using ReLU activation functions, followed by an output Dense layer with softmax activation. Adam was employed as the optimizer for the hyperparameters. The model's accuracy was assessed using the accuracy score metric, and categorical crossentropy used as the chosen loss function.
+
+3. CNN (Convolutional Neural Network): We utilized Convolutional layers with MaxPooling, followed by Dense layers and an output layer with softmax activation. Adam was used as the optimizer for the hyperparameters. To assess the model's accuracy, agin we used the accuracy score metric, and categorical crossentropy selected as the loss function.
 
 #### Results
 
 <!-- Tables showing the results of your experiments -->
+The following **Performance Metrics Table** shows the results of the Neural Network analysis:
+     
+     | Model                           | Accuracy Score | Loss   | Precision | Recall | F1-score |
+|---------------------------------|-----------------|--------|-----------|--------|----------|
+| ANN with single Layer           | 0.84            | 3.2849 | 0.89      | 0.84   | 0.84     |
+| ANN with three hidden Layers    | 0.9199          | 0.4830 | 0.92      | 0.92   | 0.91     |
+| CNN                             | 0.96            | 0.2222 | 0.97      | 0.96   | 0.96     |
+
+**Confusion Matrix of CNN** for showing the accuracy of the model..
+[Confusion Matrix of CNN](https://heriotwatt-my.sharepoint.com/:i:/r/personal/pv2008_hw_ac_uk/Documents/CW/Confusion%20Matrix%20CNN.png?csf=1&web=1&e=XusctI)
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
-
+- During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is more accurate for this dataset.
 
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
+The results of our experiments show that a Convolutional Neural Network (CNN) performs better than other types of models when applied to the Fruit-360 dataset. This indicates that the design of the neural network structure has a big impact on how well the model works. It emphasizes that trying out different designs is crucial to finding the best setup for a particular dataset.
