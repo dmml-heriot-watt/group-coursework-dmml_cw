@@ -194,7 +194,7 @@ We consider two types of Clustering Algorithms as an experiment analysis of clus
 
 #### Results
 <!-- Tables showing the results of your experiments -->
-The following **Score Table ** shows the key results of the clustering analysis:
+The following **Score Table** shows the key results of the clustering analysis:
 | Clustering Technique                        | Homogeneity Score | Completeness Score | Optimal k (Elbow Method) | Average Silhouette Score |
 |--------------------------------------------|-------------------|--------------------|--------------------------|---------------------------|
 | 9-cluster K-means Clustering (All Features) | 0.41              | 0.24               | Not Clear                | 0.24537          |
@@ -206,16 +206,16 @@ The following **Score Table ** shows the key results of the clustering analysis:
 - Hyperparameter variations were explored for the number of clusters (k) in the K-means algorithm.
 - Variations helped in selecting an appropriate number of clusters based on the silhouette score.
 
-**Elbow Method** for selecting optimal number of cluster.
+- **Elbow Method** for selecting optimal number of cluster.
 [Elbow of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Felbow%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
-**Silhouette coefficient Method** for selecting appropriate number of cluster
+- **Silhouette coefficient Method** for selecting appropriate number of cluster
 [Silhouette Score of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fsilhoutte%20score%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
-**Joinplots** to access efficiency of cluster
+- **Joinplots** to access efficiency of cluster
 [Join plots for EM algorithm using selected feature )](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fjoinplot%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
-The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. Hyperparameter variations played a crucial role in selecting the right number of clusters for the chosen features. Variations in number of clusters helped in selecting an appropriate number of clusters based on the silhouette score.
+The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. Hyperparameter variations played a crucial role in selecting the right number of clusters for the chosen features. Variations in number of clusters helped in selecting an appropriate number of clusters based on the silhouette score.In the end, 0.14 Homogeneity score and 0.0398 Completeness score indicates that the clustering algorithm may not be effectively capturing the wine quality in the dataset.
 
 
 ### Decision Trees
