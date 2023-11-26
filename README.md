@@ -231,6 +231,9 @@ The following **Performance Metrics Table** shows the results of the Decision tr
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
 
+- During the model implementation, our initial approach involved implementing a baseline classification model. We implemented k-fold cross-validation and constructed a complexity tree. These techniques helped us identify and address potential overfitting issues.
+- After making some adjustments to the model, we were able to achieve an accuracy of 96%. This shows that the adjustments we made helped the model to be more accurate and reliable.
+
 ### Neural Networks
 
 The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
