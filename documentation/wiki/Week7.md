@@ -5,7 +5,7 @@
 
 
 
-### Clustering 
+### Decision Tree 
 For implementation of Decision tree we have selected Wine Quality Dataset that contains information about the chemical properties of various wines. Each row in the dataset represents a specific wine sample, and the features serve as inputs for the decision trees.The output labels represent the quality of the wine. Specifically the labels are assigned based on the quality rating of each wine.
 
 **Click to view :**
