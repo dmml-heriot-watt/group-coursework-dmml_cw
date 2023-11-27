@@ -177,7 +177,7 @@ We consider two types of Clustering Algorithms as an experiment analysis of clus
 	-  **9-cluster K-means Clustering with all features:** Initially, clustering was attempted with 9 clusters representing the wine quality levels. We used all the feature of the dataset as an input and also calculated homogeneity score and completeness score for this cluster. We implimented Elbow Method and silhouette score to identify optimum number of cluster for this dataset.
 	-  **4-cluster K-means Clustering with all Features:**  As we got highest value of silhouette score for 4 number of cluster in initial implimentation stage , we applied 4 cluster K-means clustering including all the feature of the dataset and we also calculated homogeneity score and completeness score for this cluster.We again implimented Elbow method and silhouette score for this cluster as well.
 	- **3-cluster K-means clustering with selected Features:** By considering result from above two cluster selection we moved to Feature selection for getting batter quality of cluster so, Feature selection of pH and alcohol was performed based on a correlation matrix and pair plot analysis. Clustering was then performed using K-means with 3 clusters on the selected features (pH and alcohol). We perform elbow method and silhouette score with homogeneity score and completeness score for this cluster. 
-2.  **Expectation-Maximization (EM) Algorithm:**  - The EM algorithm was applied to the dataset, considering all features. We observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol' to assess the efficiency of clustering where we could try to extract different cluster that would help us predict the quality of a wine. 
+2.  **Expectation-Maximization (EM) Algorithm:**  - We observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol' to assess the efficiency of clustering where we could try to extract different cluster that would help us predict the quality of a wine. The EM algorithm was applied to the dataset, considering 'alcohol', 'pH,' and 'fixed acidity' features. Those features offers a good cluster separation according to Quality. 
 
 #### Results
 <!-- Tables showing the results of your experiments -->
@@ -197,7 +197,7 @@ The following **Score Table** shows the key results of the clustering analysis:
 - **Silhouette coefficient Method** for selecting appropriate number of cluster
 <img width="834" alt="silhoutte score" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/2c17c1c6-7e97-4534-afc1-199fa0c56c1e">
 
-**EM Algorithm Result:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency.
+**EM Algorithm Result:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency. The proportion of qualities is the same as in the global data set. This algorithms is not suited for Quality predicition.
 - **Joinplots** to access efficiency of cluster
 <img width="573" alt="joinplot" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/1e12f92b-45ef-44f3-8b4e-ef3775e7d713">
 
