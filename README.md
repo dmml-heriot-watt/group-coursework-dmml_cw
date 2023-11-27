@@ -233,17 +233,23 @@ We consider two types of Decision tree as an experiment analysis on the dataset
 
 #### Results
 <!-- Tables showing the results of your experiments -->
-The following **Performance Metrics Table** shows the results of the Decision tree analysis:
-| Model                        | Accuracy Score | Precision | Recall | F1-score |
-|------------------------------|-----------------|-----------|--------|----------|
-| Classification        |      0.58      |    0.57    |   0.58  |   0.57    |
+The following **Performance Metrics Table** shows the results of the **Decision tree** analysis:
+| Model                          | Accuracy Score | Precision | Recall | F1-score |
+| ------------------------------ | -------------- | --------- | ------ | -------- |
+| Wine Type(classification)      | 0.95           | 0.96      | 0.95   | 0.95     |
+| Wine Quality(classification)   | 0.52           | 0.63      | 0.52   | 0.45     |
+
+The following *Performance Metrics Table* shows the results of the **Random Forest** analysis:
+| Model                               | Accuracy Score | Precision | Recall | F1-score |
+|-------------------------------------|-----------------|-----------|--------|----------|
+| Wine Quality(classification)        |      0.626      |    0.6159    |   0.626  |   0.607    |
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
 
-- During the model implementation, our initial approach involved implementing a baseline classification model. We implemented k-fold cross-validation and constructed a complexity tree. These techniques helped us identify and address potential overfitting issues.
-- After making some adjustments to the model, we were able to achieve an accuracy of 96%. This shows that the adjustments we made helped the model to be more accurate and reliable.
-
+- For wine type classification, we implemented decision tree which was complex(high number of nodes and very high depth). Also score for training and test data was very high indicated possibility of overfitting. We implemented k-fold cross-validation and did some regularization(pruning). These techniques helped us to address potential overfitting issue.
+- For wine quality classification, we implemented complex and regularized tree but scores were not very high as can be seen in the table above. 
+- We tried Random forest for Wine Qualty and it was showing a little better results than decision tree. 
 ### Neural Networks
 
 The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
