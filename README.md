@@ -61,9 +61,6 @@ The objectives of this project are:
 
 <!-- Below you should report all of your findings in each section. You can fill this out as the project progresses. -->
 
-### Research objectives
-<!-- What questions you are trying to answer? -->
-
 ### Datasets
 1.  **Wine Quality Dataset:**
     
@@ -271,4 +268,4 @@ The following **Performance Metrics Table** shows the results of the Neural Netw
 
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
-
+Overall, this project explored the wine data and fruit image through advanced data analysis techniques. We used methods like clustering and decision trees to understand what makes a good-quality wine and achieved impressive accuracy in predicting wine quality. Clustering faced complexities in capturing wine quality clusters accurately, while Decision tree models showcased high accuracy,For fruit image classification, neural networks, especially CNNs, proved to be highly effective. The datasets we used are reliable and widely accepted in the field. However, if we were to use these models in the real world, we'd need to be careful about some challenges, such as the sensitivity of clustering to minor dataset variations and the need to adapt to changes in wine and image datasets over time.
