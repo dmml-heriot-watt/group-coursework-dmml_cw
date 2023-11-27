@@ -203,13 +203,19 @@ The following **Score Table** shows the key results of the clustering analysis:
 
 
 #### Discussion
-<!-- A brief discussion on the results of your experiment -->
-The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. Hyperparameter variations played a crucial role in selecting the right number of clusters for the chosen features. Variations in number of clusters helped in selecting an appropriate number of clusters based on the silhouette score.In the end, 0.14 Homogeneity score and 0.0398 Completeness score indicates that the clustering algorithm may not be effectively capturing the wine quality in the dataset.
 
+<!-- A brief discussion on the results of your experiment -->
+The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. 
+
+
+After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. 
+Validation with Elbow and Silhouette score method indicated appropriate number of clusters, Silhouette score came 0.85(maximum) for k = 3 and Elbow method also suggested K=3(number of clusters).In the end, 0.14 was Homogeneity score and 0.0398 was Completeness score. 
 
 ### Decision Trees
 
-The Wine Quality is a dataset that contains information about the chemical properties of various wines. Each row in the dataset represents a specific wine sample, and the features serve as inputs for the decision trees.The output labels represent the quality of the wine. Specifically the labels are assigned based on the quality rating of each wine.
+In Wine dataset, each row in the dataset represents a specific wine sample, and the features serve as inputs for the decision trees. 
+We have implemented two decions trees, the output labels represent the wine type and quality of the wine respectively for these trees.
+Also random forest has been implemented for wine quality as output label. 
 
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
@@ -220,11 +226,10 @@ We consider two types of Decision tree as an experiment analysis on the dataset
   - [Decision Tree Classification Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreePara.ipynb) 
   - [Random Forest Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreeQuality.ipynb)
 
-1.  **CART Algorithm:**
-    In our exploration of decision tree models for wine quality prediction, we initiated with a comprehensive analysis using all available features. The initial decision tree showed impressive accuracy,     
-    reaching 99.96% on the training set and 99.20% on the test set. However, we worried that the model might be overfitting to the training data, leading to poor performance on new data. We tried to address     
-    this by using K-fold cross-validation and adjusting the complexity of the tree. To address concerns about the model's complexity, we tuned the model's parameters. To evaluate the model's accuracy, we used       the accuracy score metric.
-
+1.  **Decision Tree Classification:**
+    In our exploration of decision tree models for wine type and wine quality prediction, we started with all available features. The initial decision tree showed impressive accuracy,     
+    reaching 99.97% on the training set and 99.33% on the test set. However, we were worried that the model might be overfitting to the training data.
+    We tried to address this by using K-fold cross-validation and adjusting the parameters of the tree. To evaluate the model's accuracy, we used the accuracy, F1-score, Precision, Recall etc.
 
 #### Results
 <!-- Tables showing the results of your experiments -->
