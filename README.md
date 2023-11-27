@@ -137,24 +137,30 @@ The dataset primarily consists of fruit images with dimention of 100x100 pixels,
 <!-- Visualisations of your dataset -->
 
 **Click to view :**  [Visualisation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
--   There are no missing values in the dataset.
--   - Click to view [Correlation Matrix](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fcorrelation%20matrix%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
--   Some observations from the summary statistics:
-    -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
-    -   Residual sugar: The mean is 5.44, the median is 3, and the max value is 65.8, indicating the presence of outliers and right skewness. The standard deviation is high, indicating a variety of sugar levels in different wines.
-    -   Total sulfur dioxide and free sulfur dioxide: The standard deviation is significant, indicating high variability. The max values are high, so there are potential outliers.
-    -   Alcohol: The mean of 10.49 and the median of 10.3 are quite close. The max is 14 and the min is 8.
--   Quality of wine lies between (3-9), but 93% of wines are between 5-7 quality, and 99.5% wines have a quality between 4 to 8.
--   The scatterplot suggests that density and alcohol content in the wine (both red and white) are somewhat negatively correlated. The correlation matrix also shows that alcohol and density are negatively correlated with a value of -0.6867.
--   There are positive correlations between density and residual sugar (0.55), density and fixed acidity (0.46), and alcohol and quality (0.44).
--   Total sulfur dioxide and free sulfur dioxide have a very strong correlation (0.72), so only one of these features should be selected during feature reduction.
--   Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
+
+<img width="637" alt="correlation matrix" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/c9bc92a0-8cfa-485c-a5e3-d953a77b1489">
+
+
+**Correlation matrix for wine features**
+
+
+
+<img width="586" alt="scatter plot, alcohol and density" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/1c2362e8-73c1-4d28-b504-76a5b4f9c4d0">
 
 ### Dataset Analysis
 <!-- Analysis of your dataset -->
 
--  There is no missing value in this dataset to handle 
--  Identified outliers in certain features in the dataset.
+- There is no missing value in this dataset to handle 
+- Identified outliers in certain features in the dataset.
+- Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
+- Residual sugar: The mean is 5.44, the median is 3, and the max value is 65.8, indicating the presence of outliers and right skewness. The standard deviation is high, indicating a variety of sugar levels in different wines.
+- Total sulfur dioxide and free sulfur dioxide: The standard deviation is significant, indicating high variability. The max values are high, so there are potential outliers.
+- Alcohol: The mean of 10.49 and the median of 10.3 are quite close. The max is 14 and the min is 8.
+- Quality of wine lies between (3-9), but 93% of wines are between 5-7 quality, and 99.5% wines have a quality between 4 to 8.
+- The scatterplot suggests that density and alcohol content in the wine (both red and white) are somewhat negatively correlated. The correlation matrix also shows that alcohol and density are negatively correlated with a value of -0.6867.
+- There are positive correlations between density and residual sugar (0.55), density and fixed acidity (0.46), and alcohol and quality (0.44).
+- Total sulfur dioxide and free sulfur dioxide have a very strong correlation (0.72), so only one of these features should be selected during feature reduction.
+- Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
 
 ### Clustering 
 The mixed dataset of wine, a combination of the "Red Wine Dataset" and "White Wine Dataset," was utilized for implementing clustering algorithms. The primary objective was to observe clear clusters corresponding to the 9 wine quality levels. Initially, all features of the dataset were considered as input to determine the best clusters for predicting wine quality. Subsequently, after implementing various approaches, a selection of features from the dataset, specifically pH and Alcohol, was selected to achieve more efficient clustering results.
@@ -182,17 +188,19 @@ The following **Score Table** shows the key results of the clustering analysis:
 | 4-cluster K-means Clustering (All Features) | 0.1857            | 0.0974             | Not Clear                | 0.2453                    |
 | 3-cluster K-means Clustering (Selected Features) | 0.1448       | 0.0398             | 3                        | 0.85                      |
 
-**EM Algorithm:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency.
-
 - Hyperparameter variations were explored for the number of clusters (k) in the K-means algorithm.
 - Variations helped in selecting an appropriate number of clusters based on the silhouette score.
 
 - **Elbow Method** for selecting optimal number of cluster.
-[Elbow of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Felbow%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+<img width="786" alt="elbow" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/58567233-7edc-4408-a0c8-e0a778117028">
+
 - **Silhouette coefficient Method** for selecting appropriate number of cluster
-[Silhouette Score of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fsilhoutte%20score%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+<img width="834" alt="silhoutte score" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/2c17c1c6-7e97-4534-afc1-199fa0c56c1e">
+
+**EM Algorithm Result:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency.
 - **Joinplots** to access efficiency of cluster
-[Join plots for EM algorithm using selected feature )](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fjoinplot%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+<img width="573" alt="joinplot" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/1e12f92b-45ef-44f3-8b4e-ef3775e7d713">
+
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
