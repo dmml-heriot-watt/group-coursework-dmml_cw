@@ -1,46 +1,35 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/58HShPQN)
-# Data Mining and Machine Learning Group Coursework
-
-> [!NOTE]
-> You should update and customize this README as the project progresses.
-
-> [!IMPORTANT]
-> See the COURSEWORK specification on CANVAS for details of the group coursework criteria/deliverables
-
+# Comprehensive exploration of Wine Dataset and Fruit Classification
 ## Group Members
-
-> [!IMPORTANT]
-> Include your names and `@` your GitHub usernames for each.
 
 1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579)
 2. Vikas Chaudhary [@VikasChaudhary123](https://github.com/VikasChaudhary123)
 3. Kaushik Lathiya [@Kaushik0704](https://github.com/Kaushik0704)
-4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie)
-
+4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie) H00450696
 
 ## Initial Project Proposal
-
-> [!NOTE]
-This project aims to explore the fields of computer vision and viticulture by conducting a comprehensive analysis of fruit image classification and wine quality prediction. For the wine dataset, we plan to apply clustering techniques based on quality and chemical properties such as alcohol content, sugar levels, and acid concentrations. Additionally, decision tree algorithms will be employed to identify the key features contributing to the best wine quality. In the fruit dataset, the focus will shift towards the application of neural networks and convolutional neural networks (CNNs) for image classification. The primary goal is to perform image classification and assess the performance using metrics such as accuracy, precision, recall, and F-score.
+This project aims to use two datasets as mentioned below. 
+1. **Wine dataset**
+   - To preprocess, explore, get insights, show visualizations.
+   - Clustering including all the features, some specific features. Verification using Elbow method and Silhouette score.
+   - Decision trees to predict wine type and wine quality.
+   - Results after applying these techniques can be used by wine makers. 
+3. **Fruit dataset of images**
+     - Neural network and Convolutional neural network to predict fruit type from images.
+     - Application of image classification is in the field of agriculture. There are hundreds of varieties of apple and other fruits, making it impossible to remember for a human being. Applications can be built to identify species of fruits, same technique can be applied to detect diseases in fruits or vegetables. 
 
 ## Project Planning
 We'll make use of GitHub's collaborative features, such as issue tracking, version control, and a dedicated wiki, to organise project tasks and documentation in a way that will facilitate effective development and teamwork.
 - **Click to view -** [Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
   
 ### Research objectives
-
-> [!NOTE]
-> What are the questions you are trying to answer? What are the goals of your project?
 The objectives of this project are:
 > Apply clustering techniques on wine data based on quality and chemical properties.
-> Identify key features contributing to the best wine quality using decision tree algorithms.
+> Identify key features contributing to the wine type and best wine quality using decision tree algorithms.
 > Develop effective image classification models for fruit recognition using neural networks and CNNs.
 > Assess model performance using metrics like accuracy, precision, recall, and F-score.
 
 ### Milestones
-
-> [!NOTE]
-> Create a bullet list of the key milestones for your project. Discuss these with your group. You may need to update these as the project progresses.
 > Milestone of this project.
 
 | Task                                      | Start Date | End Date   | Duration | Week |
@@ -60,9 +49,16 @@ The objectives of this project are:
 ## Findings Report
 
 <!-- Below you should report all of your findings in each section. You can fill this out as the project progresses. -->
+Some of the findings are listed below.
 
-### Research objectives
-<!-- What questions you are trying to answer? -->
+**1. Wine Dataset**
+  - _**Data exploration and visualization**_ - No missing values in dataset, strong correlation between features (free sulfur and total sulfur) so one of them can be dropped. It was observed that wine quality is dependent on alcohol content and acidity.  
+  - _**Clustering**_ - Including all the features could not conclude to optimal number of clusters (No clear elbow point with elbow method, low silhouette score). Clustering with selected features resulted into better silhouette score and clear elbow point suggesting k=3 number of clusters.  
+  - _**Decision Trees**_ - For Wine type prediction, model was suspected to overfitting, so we did k-fold cross validation, regularisation(pruning), after this model is fitting well giving good accuracy. For wine quality, there was significant difference between test and training accuracy, show overfitting. Even after regularisation, we could not fit the model for better accuracy for wine quality.
+    
+**2. Fruits image dataset**
+  - **_Artificial Neural Networks (ANN)_** - We implemented single layer network (around 84 percent accuracy), with 3 hidden layers(92 % accuracy). Adding layers helped to increase the accuracy. 
+  - **_Convolutional Neural Networks( CNN)_** - This gave around 96 percent accuracy with two hidden layers, depicting  that CNN works better than ANN in our case. 
 
 ### Datasets
 1.  **Wine Quality Dataset:**
@@ -80,14 +76,14 @@ The objectives of this project are:
 ### Dataset description
 
 ##### Wine Quality Dataset
-**Objective:** The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. 
-
-The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, example below shows the information about the attributes and the data of this dataset.
+The Wine Quality Dataset is a dataset that contains information about the chemical properties of red and white wine, example below shows the information about the attributes and the data of this dataset.
   
 ##### Fruit 360 Dataset
-**Objective:** This dataset is used for neural network tasks, including classification and regression.
+Fruits 360 dataset is a dataset that contains images of different fruits with (100 * 100) pixel dimension . These images cover different types of fruits. 
 
-Fruits 360 dataset is a dataset that contains images of different fruits with 100 * 100 pixel dimension . These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. 
+We have only included some fruits (with all images of each fruit) as the whole dataset was taking a lot of memory(to load) and time(to train). We have included only one variety of apple(Apple Braeburn) and only fruits with starting letter from A to D.
+Link for sub dataset is [Fruit-360](https://heriotwatt-my.sharepoint.com/:u:/g/personal/vc2020_hw_ac_uk/Eb6OWMLpww1NgwMj4Q4GTdkBdE-od16PT1xsonbdzZPKCA?e=A9UEoh)
+
 
 ### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
@@ -97,7 +93,7 @@ The data is typically organized in a tabular format, with rows representing indi
 | fixed acidity | volatile acidity | citric acid | residual sugar | chlorides | free sulfur dioxide | total sulfur dioxide | density | pH | sulphates | alcohol | quality | wine_name |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------------|------------|------------|------------|
 | 7.4	 | 0.70 | 0.00 | 1.9 | 0.076 | 11.0 | 34.0 | 0.9978 | 3.51 | 0.56 | 9.4	 | 5 | red |
-| 7.8 | 0.88 | 0.00 | 2.6 | 0.098 | 25.0 | 67.0 | 0.9968 | 3.20 | 0.68 | 9.8 | 5 | red |
+| 7.8 | 0.88 | 0.00 | 2.6 | 0.098 | 25.0 | 67.0 | 0.9968 | 3.20 | 0.68 | 9.8 | 5 | white |
 
 
 ##### Fruit 360 Dataset
@@ -116,11 +112,12 @@ The dataset primarily consists of fruit images with dimention of 100x100 pixels,
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
   
 ##### Fruit 360 Dataset
-- The Fruits 360 Dataset includes a total of 90,483 images.
-- The dataset is divided into the following subsets:
+- The original Fruits 360 Dataset includes a total of 90,483 images.
+- The original dataset is divided into the following subsets:
   - Training set: 67,692 images, each featuring a single fruit.
   - Test set: 22,688 images, each showcasing a single fruit.
-- There are 131 distinct classes representing different fruits and different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
+- There are 131 distinct classes in original dataset,  representing different fruits and different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
+- **For our model, we are using 28 distinc classes of fruits so our training and testing dataset contains less images than origial dataset.**
   
 ### Dataset Summary Statistics
 <!-- Summary statistics of your dataset -->
@@ -140,24 +137,30 @@ The dataset primarily consists of fruit images with dimention of 100x100 pixels,
 <!-- Visualisations of your dataset -->
 
 **Click to view :**  [Visualisation Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/WineDataViz.ipynb)
--   There are no missing values in the dataset.
--   - Click to view [Correlation Matrix](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fcorrelation%20matrix%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
--   Some observations from the summary statistics:
-    -   Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
-    -   Residual sugar: The mean is 5.44, the median is 3, and the max value is 65.8, indicating the presence of outliers and right skewness. The standard deviation is high, indicating a variety of sugar levels in different wines.
-    -   Total sulfur dioxide and free sulfur dioxide: The standard deviation is significant, indicating high variability. The max values are high, so there are potential outliers.
-    -   Alcohol: The mean of 10.49 and the median of 10.3 are quite close. The max is 14 and the min is 8.
--   Quality of wine lies between (3-9), but 93% of wines are between 5-7 quality, and 99.5% wines have a quality between 4 to 8.
--   The scatterplot suggests that density and alcohol content in the wine (both red and white) are somewhat negatively correlated. The correlation matrix also shows that alcohol and density are negatively correlated with a value of -0.6867.
--   There are positive correlations between density and residual sugar (0.55), density and fixed acidity (0.46), and alcohol and quality (0.44).
--   Total sulfur dioxide and free sulfur dioxide have a very strong correlation (0.72), so only one of these features should be selected during feature reduction.
--   Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
+
+<img width="637" alt="correlation matrix" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/c9bc92a0-8cfa-485c-a5e3-d953a77b1489">
+
+
+**Correlation matrix for wine features**
+
+
+
+<img width="586" alt="scatter plot, alcohol and density" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/1c2362e8-73c1-4d28-b504-76a5b4f9c4d0">
 
 ### Dataset Analysis
 <!-- Analysis of your dataset -->
 
--  There is no missing value in this dataset to handle 
--  Identified outliers in certain features in the dataset.
+- There is no missing value in this dataset to handle 
+- Identified outliers in certain features in the dataset.
+- Fixed acidity: The mean and median are close, suggesting that the data is symmetric and that there is no strong skewness. The max value is 15.9.
+- Residual sugar: The mean is 5.44, the median is 3, and the max value is 65.8, indicating the presence of outliers and right skewness. The standard deviation is high, indicating a variety of sugar levels in different wines.
+- Total sulfur dioxide and free sulfur dioxide: The standard deviation is significant, indicating high variability. The max values are high, so there are potential outliers.
+- Alcohol: The mean of 10.49 and the median of 10.3 are quite close. The max is 14 and the min is 8.
+- Quality of wine lies between (3-9), but 93% of wines are between 5-7 quality, and 99.5% wines have a quality between 4 to 8.
+- The scatterplot suggests that density and alcohol content in the wine (both red and white) are somewhat negatively correlated. The correlation matrix also shows that alcohol and density are negatively correlated with a value of -0.6867.
+- There are positive correlations between density and residual sugar (0.55), density and fixed acidity (0.46), and alcohol and quality (0.44).
+- Total sulfur dioxide and free sulfur dioxide have a very strong correlation (0.72), so only one of these features should be selected during feature reduction.
+- Wines with higher fixed acidity, alcohol content, and lower volatile acidity tend to be of higher quality.
 
 ### Clustering 
 The mixed dataset of wine, a combination of the "Red Wine Dataset" and "White Wine Dataset," was utilized for implementing clustering algorithms. The primary objective was to observe clear clusters corresponding to the 9 wine quality levels. Initially, all features of the dataset were considered as input to determine the best clusters for predicting wine quality. Subsequently, after implementing various approaches, a selection of features from the dataset, specifically pH and Alcohol, was selected to achieve more efficient clustering results.
@@ -174,7 +177,7 @@ We consider two types of Clustering Algorithms as an experiment analysis of clus
 	-  **9-cluster K-means Clustering with all features:** Initially, clustering was attempted with 9 clusters representing the wine quality levels. We used all the feature of the dataset as an input and also calculated homogeneity score and completeness score for this cluster. We implimented Elbow Method and silhouette score to identify optimum number of cluster for this dataset.
 	-  **4-cluster K-means Clustering with all Features:**  As we got highest value of silhouette score for 4 number of cluster in initial implimentation stage , we applied 4 cluster K-means clustering including all the feature of the dataset and we also calculated homogeneity score and completeness score for this cluster.We again implimented Elbow method and silhouette score for this cluster as well.
 	- **3-cluster K-means clustering with selected Features:** By considering result from above two cluster selection we moved to Feature selection for getting batter quality of cluster so, Feature selection of pH and alcohol was performed based on a correlation matrix and pair plot analysis. Clustering was then performed using K-means with 3 clusters on the selected features (pH and alcohol). We perform elbow method and silhouette score with homogeneity score and completeness score for this cluster. 
-2.  **Expectation-Maximization (EM) Algorithm:**  - The EM algorithm was applied to the dataset, considering all features. We observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol' to assess the efficiency of clustering where we could try to extract different cluster that would help us predict the quality of a wine. 
+2.  **Expectation-Maximization (EM) Algorithm:**  - We observed joinplots for 'fixed acidity' vs. 'pH,' 'fixed acidity' vs. 'alcohol,' 'pH' vs. 'alcohol,' and 'sulphates' vs. 'alcohol' to assess the efficiency of clustering where we could try to extract different cluster that would help us predict the quality of a wine. The EM algorithm was applied to the dataset, considering 'alcohol', 'pH,' and 'fixed acidity' features. Those features offers a good cluster separation according to Quality. 
 
 #### Results
 <!-- Tables showing the results of your experiments -->
@@ -185,26 +188,34 @@ The following **Score Table** shows the key results of the clustering analysis:
 | 4-cluster K-means Clustering (All Features) | 0.1857            | 0.0974             | Not Clear                | 0.2453                    |
 | 3-cluster K-means Clustering (Selected Features) | 0.1448       | 0.0398             | 3                        | 0.85                      |
 
-**EM Algorithm:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency.
-
 - Hyperparameter variations were explored for the number of clusters (k) in the K-means algorithm.
 - Variations helped in selecting an appropriate number of clusters based on the silhouette score.
 
 - **Elbow Method** for selecting optimal number of cluster.
-[Elbow of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Felbow%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+<img width="786" alt="elbow" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/58567233-7edc-4408-a0c8-e0a778117028">
+
 - **Silhouette coefficient Method** for selecting appropriate number of cluster
-[Silhouette Score of 3-cluster K-means Clustering (Selected Features)](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fsilhoutte%20score%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+<img width="834" alt="silhoutte score" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/2c17c1c6-7e97-4534-afc1-199fa0c56c1e">
+
+**EM Algorithm Result:** Mean quality of clusters ranged from 5.2 to 6.5, indicating inefficiency. The proportion of qualities is the same as in the global data set. This algorithms is not suited for Quality predicition.
 - **Joinplots** to access efficiency of cluster
-[Join plots for EM algorithm using selected feature )](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Fjoinplot%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+<img width="573" alt="joinplot" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/1e12f92b-45ef-44f3-8b4e-ef3775e7d713">
+
 
 #### Discussion
-<!-- A brief discussion on the results of your experiment -->
-The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. Hyperparameter variations played a crucial role in selecting the right number of clusters for the chosen features. Variations in number of clusters helped in selecting an appropriate number of clusters based on the silhouette score.In the end, 0.14 Homogeneity score and 0.0398 Completeness score indicates that the clustering algorithm may not be effectively capturing the wine quality in the dataset.
 
+<!-- A brief discussion on the results of your experiment -->
+The K-Means and EM algorithms were used in an iterative manner for clustering. While feature selection based on joint plots improved interpretability, the EM algorithm did not demonstrate efficiency in clustering data and predicting wine quality. In K-Means, The initial attempt of 9 clusters aligned with the diverse quality levels did not produce meaningful results. 
+
+
+After that, we observed that pH and alcohol feature selection significantly improved the accuracy of the clustering model. 
+Validation with Elbow and Silhouette score method indicated appropriate number of clusters, Silhouette score came 0.85(maximum) for k = 3 and Elbow method also suggested K=3(number of clusters).In the end, 0.14 was Homogeneity score and 0.0398 was Completeness score. 
 
 ### Decision Trees
 
-The Wine Quality is a dataset that contains information about the chemical properties of various wines. Each row in the dataset represents a specific wine sample, and the features serve as inputs for the decision trees.The output labels represent the quality of the wine. Specifically the labels are assigned based on the quality rating of each wine.
+In Wine dataset, each row in the dataset represents a specific wine sample, and the features serve as inputs for the decision trees. 
+We have implemented two decions trees, the output labels represent the wine type and quality of the wine respectively for these trees.
+Also random forest has been implemented for wine quality as output label. 
 
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
@@ -215,28 +226,39 @@ We consider two types of Decision tree as an experiment analysis on the dataset
   - [Decision Tree Classification Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreePara.ipynb) 
   - [Random Forest Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreeQuality.ipynb)
 
-1.  **CART Algorithm:**
-    In our exploration of decision tree models for wine quality prediction, we initiated with a comprehensive analysis using all available features. The initial decision tree showed impressive accuracy,     
-    reaching 99.96% on the training set and 99.20% on the test set. However, we worried that the model might be overfitting to the training data, leading to poor performance on new data. We tried to address     
-    this by using K-fold cross-validation and adjusting the complexity of the tree. To address concerns about the model's complexity, we tuned the model's parameters. To evaluate the model's accuracy, we used       the accuracy score metric.
-
+1.  **Decision Tree Classification:**
+    In our exploration of decision tree models for wine type and wine quality prediction, we started with all available features. The initial decision tree showed impressive accuracy,     
+    reaching 99.97% on the training set and 99.33% on the test set. However, we were worried that the model might be overfitting to the training data.
+    We tried to address this by using K-fold cross-validation and adjusting the parameters of the tree. To evaluate the model's accuracy, we used the accuracy, F1-score, Precision, Recall etc.
 
 #### Results
 <!-- Tables showing the results of your experiments -->
-The following **Performance Metrics Table** shows the results of the Decision tree analysis:
-| Model                        | Accuracy Score | Precision | Recall | F1-score |
-|------------------------------|-----------------|-----------|--------|----------|
-| Classification        |      0.58      |    0.57    |   0.58  |   0.57    |
+The following **Performance Metrics Table** shows the results of the **Decision tree** analysis:
+| Model                          | Accuracy Score | Precision | Recall | F1-score |
+| ------------------------------ | -------------- | --------- | ------ | -------- |
+| Wine Type(classification)      | 0.95           | 0.96      | 0.95   | 0.95     |
+| Wine Quality(classification)   | 0.52           | 0.63      | 0.52   | 0.45     |
+
+The following *Performance Metrics Table* shows the results of the **Random Forest** analysis:
+| Model                               | Accuracy Score | Precision | Recall | F1-score |
+|-------------------------------------|-----------------|-----------|--------|----------|
+| Wine Quality(classification)        |      0.626      |    0.6159    |   0.626  |   0.607    |
+
+**For Wine Type classification, visualization of pruned Decision tree and the confusion matrix is given below.**
+
+<img width="743" alt="decision tree" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/496aa514-0800-45ca-a9e5-9450d0e76891">
+
+![Confusion](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/ba181ee8-5b9d-4031-b168-1ee326d99806)
 
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
 
-- During the model implementation, our initial approach involved implementing a baseline classification model. We implemented k-fold cross-validation and constructed a complexity tree. These techniques helped us identify and address potential overfitting issues.
-- After making some adjustments to the model, we were able to achieve an accuracy of 96%. This shows that the adjustments we made helped the model to be more accurate and reliable.
-
+- For wine type classification, we implemented decision tree which was complex(high number of nodes and very high depth). Also score for training and test data was very high indicated possibility of overfitting. We implemented k-fold cross-validation and did some regularization(pruning). These techniques helped us to address potential overfitting issue.
+- For wine quality classification, we implemented complex and regularized tree but scores were not very high as can be seen in the table above. 
+- We tried Random forest for Wine Qualty and it was showing a little better results than decision tree. 
 ### Neural Networks
 
-The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
+The Fruit-360 dataset, which consists of (100x100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
 
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
@@ -262,13 +284,12 @@ The following **Performance Metrics Table** shows the results of the Neural Netw
 | CNN                          | 0.96            | 0.2222 | 0.97      | 0.96   | 0.96     |
 
 **Confusion Matrix of CNN** for showing the accuracy of the model..
-
-[Confusion Matrix of CNN](https://heriotwatt-my.sharepoint.com/:i:/r/personal/pv2008_hw_ac_uk/Documents/CW/Confusion%20Matrix%20CNN.png?csf=1&web=1&e=XusctI)
+<img width="733" alt="Confusion Matrix CNN" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/47f9e9ab-b338-4e0d-b7dd-544885053080">
 
 #### Discussion
-- During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is more accurate for this dataset.
+- During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is suitable as we had more than 2 categories. 
 - The results of our experiments show that a Convolutional Neural Network (CNN) performs better than other types of models when applied to the Fruit-360 dataset. This indicates that the design of the neural network structure has a big impact on how well the model works. It emphasizes that trying out different designs is crucial to finding the best setup for a particular dataset.
 
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
-
+Overall, this project explored the wine data and fruit image through advanced data analysis techniques. We used methods like clustering and decision trees to understand type of wine, what makes a good-quality wine and achieved accuracy in predicting wine type and wine quality. Clustering faced complexities in capturing wine quality clusters accurately, while Decision tree models showcased high accuracy for predicting type of wine. For fruit image classification, neural networks, especially CNNs, proved to be highly effective. The datasets we used are reliable and widely accepted in the field. However, if we were to use these models in the real world, we would like to use huge volume of data as we felt that wine dataset was too small(potentiall that is why we faced overfitting in decision trees),  we'd need to be careful about some challenges, such as the sensitivity of clustering to minor dataset variations and the need to adapt to changes in wine and image datasets over time.
