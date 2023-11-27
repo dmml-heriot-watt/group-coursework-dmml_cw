@@ -1,22 +1,25 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/58HShPQN)
 # Comprehensive exploration of Wine Dataset and Fruit Classification
+This project preprocessses, visualize and analyze, clusters(make segments), predicts(decision trees and random forest) using wine dataset. It also classifies fruit images using neural network from fruits dataset.   
+## Group Name 
+dmml_cw 
 ## Group Members
 
-1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579)
-2. Vikas Chaudhary [@VikasChaudhary123](https://github.com/VikasChaudhary123)
-3. Kaushik Lathiya [@Kaushik0704](https://github.com/Kaushik0704)
+1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579) H00426509
+2. Vikas Chaudhary [@VikasChaudhary123](https://github.com/VikasChaudhary123) H00422732
+3. Kaushik Lathiya [@Kaushik0704](https://github.com/Kaushik0704) H00426299
 4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie) H00450696
 
 ## Initial Project Proposal
 This project aims to use two datasets as mentioned below. 
 1. **Wine dataset**
-   - To proprocess, explore, get insights, show visualizations.
+   - To preprocess, explore, get insights, show visualizations.
    - Clustering including all the features, some specific features. Verification using Elbow method and Silhouette score.
-   - Decision trees to predict wine type and wine quality
+   - Decision trees to predict wine type and wine quality.
    - Results after applying these techniques can be used by wine makers. 
 3. **Fruit dataset of images**
      - Neural network and Convolutional neural network to predict fruit type from images.
-     - Applicaiton of image classification is in the field of agriculture. There are hundreds of varities of apple and other fruits, making it impossible to remember for a human being. Applications can be build to identify species of fruits, same technique can be applied to detect diseases in fruits or vegetables. 
+     - Application of image classification is in the field of agriculture. There are hundreds of varieties of apple and other fruits, making it impossible to remember for a human being. Applications can be built to identify species of fruits, same technique can be applied to detect diseases in fruits or vegetables. 
 
 ## Project Planning
 We'll make use of GitHub's collaborative features, such as issue tracking, version control, and a dedicated wiki, to organise project tasks and documentation in a way that will facilitate effective development and teamwork.
@@ -52,13 +55,13 @@ The objectives of this project are:
 Some of the findings are listed below.
 
 **1. Wine Dataset**
-  - _**Data exploration and visualization**_ - No missing values in dataset, strong correlation between features(free sulfur and total sulfur) so one of them can be dropped. It was observed that wine quality is dependent on alcohol content and acidity.  
-  - _**Clustering**_ - Including all the features could not conclude to optimal number of clusters(No clear elbow point with elbow method, low silhouette score). Clustering with selected features resulted into better silhouette score and clear elbow point suggesting k=3 number of clusters.  
-  - _**Decision Trees**_ - For Wine type prediction, model was suspected to overfitting so we did k-fold cross validation, regularisation(pruning), after this model is fitting well giving good accuracy. For wine qualiity, there was significat difference between test and training accuracy, show overfitting. Even after regularisation, we could not fit the model for better accuracy for wine quality.
+  - _**Data exploration and visualization**_ - No missing values in dataset, strong correlation between features (free sulfur and total sulfur) so one of them can be dropped. It was observed that wine quality is dependent on alcohol content and acidity.  
+  - _**Clustering**_ - Including all the features could not conclude to optimal number of clusters (No clear elbow point with elbow method, low silhouette score). Clustering with selected features resulted into better silhouette score and clear elbow point suggesting k=3 number of clusters.  
+  - _**Decision Trees**_ - For Wine type prediction, model was suspected to overfitting, so we did k-fold cross validation, regularisation(pruning), after this model is fitting well giving good accuracy. For wine quality, there was significant difference between test and training accuracy, show overfitting. Even after regularisation, we could not fit the model for better accuracy for wine quality.
     
 **2. Fruits image dataset**
-  - **_Artificial Neural Networks(ANN)_** - We implemented single layer network(around 84 percent accuracy), with 3 hidden layers(92 % accuracy). Adding layers helped to increase the accuracy. 
-  - **_Convolutional neural networks(CNN)_** - This gave around 96 percent accuracy with two hidden layers, depecting that CNN works better than ANN in our case. 
+  - **_Artificial Neural Networks (ANN)_** - We implemented single layer network (around 84 percent accuracy), with 3 hidden layers(92 % accuracy). Adding layers helped to increase the accuracy. 
+  - **_Convolutional Neural Networks( CNN)_** - This gave around 96 percent accuracy with two hidden layers, depicting  that CNN works better than ANN in our case. 
 
 ### Datasets
 1.  **Wine Quality Dataset:**
@@ -79,10 +82,10 @@ Some of the findings are listed below.
 The Wine Quality Dataset is a dataset that contains information about the chemical properties of red and white wine, example below shows the information about the attributes and the data of this dataset.
   
 ##### Fruit 360 Dataset
-Fruits 360 dataset is a dataset that contains images of different fruits with 100 * 100 pixel dimension . These images cover different types of fruits. 
+Fruits 360 dataset is a dataset that contains images of different fruits with (100 * 100) pixel dimension . These images cover different types of fruits. 
 
-We have only included some fruits(with all images of each fruit) as the whole dataset was taking a lot of memory(to load) and time(to train). We have included only one variety of apple(Apple Braeburn) and only fruits with starting letter from A to D.
-Link for sub dataset is [Fruit-360](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Felbow%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+We have only included some fruits (with all images of each fruit) as the whole dataset was taking a lot of memory(to load) and time(to train). We have included only one variety of apple(Apple Braeburn) and only fruits with starting letter from A to D.
+Link for sub dataset is [Fruit-360](https://heriotwatt-my.sharepoint.com/:u:/g/personal/vc2020_hw_ac_uk/Eb6OWMLpww1NgwMj4Q4GTdkBdE-od16PT1xsonbdzZPKCA?e=A9UEoh)
 
 
 ### Dataset examples
