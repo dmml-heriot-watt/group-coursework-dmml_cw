@@ -284,13 +284,12 @@ The following **Performance Metrics Table** shows the results of the Neural Netw
 | CNN                          | 0.96            | 0.2222 | 0.97      | 0.96   | 0.96     |
 
 **Confusion Matrix of CNN** for showing the accuracy of the model..
-
-[Confusion Matrix of CNN](https://heriotwatt-my.sharepoint.com/:i:/r/personal/pv2008_hw_ac_uk/Documents/CW/Confusion%20Matrix%20CNN.png?csf=1&web=1&e=XusctI)
+<img width="733" alt="Confusion Matrix CNN" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/47f9e9ab-b338-4e0d-b7dd-544885053080">
 
 #### Discussion
-- During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is more accurate for this dataset.
+- During the implementation of the model, we initially selected "Sigmoid" as an activation function. However, it was found that "Softmax" is suitable as we had more than 2 categories. 
 - The results of our experiments show that a Convolutional Neural Network (CNN) performs better than other types of models when applied to the Fruit-360 dataset. This indicates that the design of the neural network structure has a big impact on how well the model works. It emphasizes that trying out different designs is crucial to finding the best setup for a particular dataset.
 
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
-Overall, this project explored the wine data and fruit image through advanced data analysis techniques. We used methods like clustering and decision trees to understand what makes a good-quality wine and achieved impressive accuracy in predicting wine quality. Clustering faced complexities in capturing wine quality clusters accurately, while Decision tree models showcased high accuracy,For fruit image classification, neural networks, especially CNNs, proved to be highly effective. The datasets we used are reliable and widely accepted in the field. However, if we were to use these models in the real world, we'd need to be careful about some challenges, such as the sensitivity of clustering to minor dataset variations and the need to adapt to changes in wine and image datasets over time.
+Overall, this project explored the wine data and fruit image through advanced data analysis techniques. We used methods like clustering and decision trees to understand type of wine, what makes a good-quality wine and achieved accuracy in predicting wine type and wine quality. Clustering faced complexities in capturing wine quality clusters accurately, while Decision tree models showcased high accuracy for predicting type of wine. For fruit image classification, neural networks, especially CNNs, proved to be highly effective. The datasets we used are reliable and widely accepted in the field. However, if we were to use these models in the real world, we would like to use huge volume of data as we felt that wine dataset was too small(potentiall that is why we faced overfitting in decision trees),  we'd need to be careful about some challenges, such as the sensitivity of clustering to minor dataset variations and the need to adapt to changes in wine and image datasets over time.
