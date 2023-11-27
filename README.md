@@ -296,3 +296,10 @@ The following **Performance Metrics Table** shows the results of the Neural Netw
 ### Conclusion
 <!-- Final conclusions regarding your initial objectives -->
 Overall, this project explored the wine data and fruit image through advanced data analysis techniques. We used methods like clustering and decision trees to understand type of wine, what makes a good-quality wine and achieved accuracy in predicting wine type and wine quality. Clustering faced complexities in capturing wine quality clusters accurately, while Decision tree models showcased high accuracy for predicting type of wine. For fruit image classification, neural networks, especially CNNs, proved to be highly effective. The datasets we used are reliable and widely accepted in the field. However, if we were to use these models in the real world, we would like to use huge volume of data as we felt that wine dataset was too small(potentiall that is why we faced overfitting in decision trees),  we'd need to be careful about some challenges, such as the sensitivity of clustering to minor dataset variations and the need to adapt to changes in wine and image datasets over time.
+
+### References:
+
+1. https://www.youtube.com/watch?v=Mubj_fqiAv8&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO
+2. https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html
+3. https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+4. https://allysonf.medium.com/predict-red-wine-quality-with-svc-decision-tree-and-random-forest-24f83b5f3408
