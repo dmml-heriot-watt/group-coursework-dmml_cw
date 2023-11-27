@@ -244,6 +244,12 @@ The following *Performance Metrics Table* shows the results of the **Random Fore
 |-------------------------------------|-----------------|-----------|--------|----------|
 | Wine Quality(classification)        |      0.626      |    0.6159    |   0.626  |   0.607    |
 
+**For Wine Type classification, visualization of pruned Decision tree and the confusion matrix is given below.**
+
+<img width="743" alt="decision tree" src="https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/496aa514-0800-45ca-a9e5-9450d0e76891">
+
+![Confusion](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/assets/100375781/ba181ee8-5b9d-4031-b168-1ee326d99806)
+
 #### Discussion
 <!-- A brief discussion on the results of your experiment -->
 
@@ -252,7 +258,7 @@ The following *Performance Metrics Table* shows the results of the **Random Fore
 - We tried Random forest for Wine Qualty and it was showing a little better results than decision tree. 
 ### Neural Networks
 
-The Fruit-360 dataset, which consists of (100,100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
+The Fruit-360 dataset, which consists of (100x100) pixel-sized fruit images, is used to train neural networks. The dataset includes images of 28 different types of fruit. Every image is an input to the neural network, and the label associated with it describes the category of fruit that each image represents. In other words, The output labels are the categorical representations of the fruit categories.
 
 #### Experimental design
 <!-- Describe your experimental design and choices for the week. -->
