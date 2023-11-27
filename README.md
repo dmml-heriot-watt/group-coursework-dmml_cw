@@ -76,10 +76,14 @@ Some of the findings are listed below.
 ### Dataset description
 
 ##### Wine Quality Dataset
-The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, example below shows the information about the attributes and the data of this dataset.
+The Wine Quality Dataset is a dataset that contains information about the chemical properties of red and white wine, example below shows the information about the attributes and the data of this dataset.
   
 ##### Fruit 360 Dataset
-Fruits 360 dataset is a dataset that contains images of different fruits with 100 * 100 pixel dimension . These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. 
+Fruits 360 dataset is a dataset that contains images of different fruits with 100 * 100 pixel dimension . These images cover different types of fruits. 
+
+We have only included some fruits(with all images of each fruit) as the whole dataset was taking a lot of memory(to load) and time(to train). We have included only one variety of apple(Apple Braeburn) and only fruits with starting letter from A to D.
+Link for sub dataset is [Fruit-360](https://heriotwatt-my.sharepoint.com/personal/pv2008_hw_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW%2Felbow%2Epng&parent=%2Fpersonal%2Fpv2008%5Fhw%5Fac%5Fuk%2FDocuments%2FCW)
+
 
 ### Dataset examples
 <!-- Add a couple of example instances and the dataset format -->
@@ -89,7 +93,7 @@ The data is typically organized in a tabular format, with rows representing indi
 | fixed acidity | volatile acidity | citric acid | residual sugar | chlorides | free sulfur dioxide | total sulfur dioxide | density | pH | sulphates | alcohol | quality | wine_name |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------------|------------|------------|------------|
 | 7.4	 | 0.70 | 0.00 | 1.9 | 0.076 | 11.0 | 34.0 | 0.9978 | 3.51 | 0.56 | 9.4	 | 5 | red |
-| 7.8 | 0.88 | 0.00 | 2.6 | 0.098 | 25.0 | 67.0 | 0.9968 | 3.20 | 0.68 | 9.8 | 5 | red |
+| 7.8 | 0.88 | 0.00 | 2.6 | 0.098 | 25.0 | 67.0 | 0.9968 | 3.20 | 0.68 | 9.8 | 5 | white |
 
 
 ##### Fruit 360 Dataset
@@ -108,11 +112,12 @@ The dataset primarily consists of fruit images with dimention of 100x100 pixels,
 - The dataset is divided into 1599 entries for Red wine and 4898 entries for white wine.
   
 ##### Fruit 360 Dataset
-- The Fruits 360 Dataset includes a total of 90,483 images.
-- The dataset is divided into the following subsets:
+- The original Fruits 360 Dataset includes a total of 90,483 images.
+- The original dataset is divided into the following subsets:
   - Training set: 67,692 images, each featuring a single fruit.
   - Test set: 22,688 images, each showcasing a single fruit.
-- There are 131 distinct classes representing different fruits and different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
+- There are 131 distinct classes in original dataset,  representing different fruits and different types of the same fruit are treated as separate classes, ensuring a variety of fruits.
+- **For our model, we are using 28 distinc classes of fruits so our training and testing dataset contains less images than origial dataset.**
   
 ### Dataset Summary Statistics
 <!-- Summary statistics of your dataset -->
