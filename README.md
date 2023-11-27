@@ -1,7 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/58HShPQN)
 # Comprehensive exploration of Wine Dataset and Fruit Classification
 This project preprocessses, visualize and analyze, clusters(make segments), predicts(decision trees and random forest) using wine dataset. It also classifies fruit images using neural network from fruits dataset.   
-## Group Name - dmml_cw 
+## Group Name 
+dmml_cw 
 ## Group Members
 
 1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579) H00426509
