@@ -5,7 +5,7 @@
 1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579)
 2. Vikas Chaudhary [@VikasChaudhary123](https://github.com/VikasChaudhary123)
 3. Kaushik Lathiya [@Kaushik0704](https://github.com/Kaushik0704)
-4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie)
+4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie) H00450696
 
 ## Initial Project Proposal
 This project aims to use two datasets as mentioned below. 
