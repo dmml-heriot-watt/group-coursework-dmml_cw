@@ -5,7 +5,7 @@
 
 ### Random Forest
 A single tree reached an accuracy of 0.52 for the Wine Quality prediction. This accuracy was obtained thanks to a 23 maximum length Decison Tree, while with a maximum length of 3 the. accuracy is 0.54. The tree seemed to overfit. 
-Another model that derives from Decision Trees is the Random Forest. A Random Forest is a method that combines multiple decision trees to enhance predictive accuracy and generalization. It also mitigates overfitting. 
+Another model that derives from Decision Trees is the Random Forest. A Random Forest is a method that combines multiple decision trees to enhance predictive accuracy and generalization. It also mitigates overfitting. The experiment was made using all the data as input (except wine type), the target being the Wine Quality. The ouput labels are the predicted Quality. 
 
 **Click to view :**
 - [Random Forest Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreeQuality.ipynb)
