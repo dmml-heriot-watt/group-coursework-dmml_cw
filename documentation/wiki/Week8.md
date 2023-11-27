@@ -1,21 +1,20 @@
 ## Week- 8 Task
 - [x] Meet Team Member 
 - [x] Update GitHub Repository 
-- [x] Conclude on Decision Tree
+- [x] Random Forest
 
-### Decision Tree 
-A single tree reached an accuracy of 0.58 for the Wine Quality prediction. This accuracy was obtained thanks to a 23 maximum length Decison Tree, while with a maximum length of 3 the. accuracy is 0.54. The tree seemed to overfit. 
+### Random Forest
+A single tree reached an accuracy of 0.52 for the Wine Quality prediction. This accuracy was obtained thanks to a 23 maximum length Decison Tree, while with a maximum length of 3 the. accuracy is 0.54. The tree seemed to overfit. 
 Another model that derives from Decision Trees is the Random Forest. A Random Forest is a method that combines multiple decision trees to enhance predictive accuracy and generalization. It also mitigates overfitting. 
 
 **Click to view :**
-  - [Decision Tree Classification Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreePara.ipynb) 
-  - [Random Forest Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreeQuality.ipynb)
+- [Random Forest Notebook](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/notebooks/DecisionTreeQuality.ipynb)
   
 #### Results
 The following **Performance Metrics Table** shows the results of the Decision tree analysis:
 | Model                        | Accuracy Score | Precision | Recall | F1-score |
 |------------------------------|-----------------|-----------|--------|----------|
-| Classification        |      0.58      |    0.57    |   0.58  |   0.57    |
+| Wine Quality(classification)        |      0.52      |    0.63    |   0.52  |   0.45    |
 
 The following **Performance Metrics Table** shows the results of the Random Forest analysis:
 | Model                        | Accuracy Score | Precision | Recall | F1-score |
