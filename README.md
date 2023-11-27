@@ -1,46 +1,35 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/58HShPQN)
-# Data Mining and Machine Learning Group Coursework
-
-> [!NOTE]
-> You should update and customize this README as the project progresses.
-
-> [!IMPORTANT]
-> See the COURSEWORK specification on CANVAS for details of the group coursework criteria/deliverables
-
+# Comprehensive exploration of Wine Dataset and Fruit Classification
 ## Group Members
-
-> [!IMPORTANT]
-> Include your names and `@` your GitHub usernames for each.
 
 1. Parthavi Vaghani  [@Parthvi579](https://github.com/Parthvi579)
 2. Vikas Chaudhary [@VikasChaudhary123](https://github.com/VikasChaudhary123)
 3. Kaushik Lathiya [@Kaushik0704](https://github.com/Kaushik0704)
 4. Augustin Lobjoie [@Augustinlobjoie](https://github.com/Augustinlobjoie)
 
-
 ## Initial Project Proposal
-
-> [!NOTE]
-This project aims to explore the fields of computer vision and viticulture by conducting a comprehensive analysis of fruit image classification and wine quality prediction. For the wine dataset, we plan to apply clustering techniques based on quality and chemical properties such as alcohol content, sugar levels, and acid concentrations. Additionally, decision tree algorithms will be employed to identify the key features contributing to the best wine quality. In the fruit dataset, the focus will shift towards the application of neural networks and convolutional neural networks (CNNs) for image classification. The primary goal is to perform image classification and assess the performance using metrics such as accuracy, precision, recall, and F-score.
+This project aims to use two datasets as mentioned below. 
+1. **Wine dataset**
+   - To proprocess, explore, get insights, show visualizations.
+   - Clustering including all the features, some specific features. Verification using Elbow method and Silhouette score.
+   - Decision trees to predict wine type and wine quality
+   - Results after applying these techniques can be used by wine makers. 
+3. **Fruit dataset of images**
+     - Neural network and Convolutional neural network to predict fruit type from images.
+     - Applicaiton of image classification is in the field of agriculture. There are hundreds of varities of apple and other fruits, making it impossible to remember for a human being. Applications can be build to identify species of fruits, same technique can be applied to detect diseases in fruits or vegetables. 
 
 ## Project Planning
 We'll make use of GitHub's collaborative features, such as issue tracking, version control, and a dedicated wiki, to organise project tasks and documentation in a way that will facilitate effective development and teamwork.
 - **Click to view -** [Wiki](https://github.com/dmml-heriot-watt/group-coursework-dmml_cw/blob/main/documentation/wiki)
   
 ### Research objectives
-
-> [!NOTE]
-> What are the questions you are trying to answer? What are the goals of your project?
 The objectives of this project are:
 > Apply clustering techniques on wine data based on quality and chemical properties.
-> Identify key features contributing to the best wine quality using decision tree algorithms.
+> Identify key features contributing to the wine type and best wine quality using decision tree algorithms.
 > Develop effective image classification models for fruit recognition using neural networks and CNNs.
 > Assess model performance using metrics like accuracy, precision, recall, and F-score.
 
 ### Milestones
-
-> [!NOTE]
-> Create a bullet list of the key milestones for your project. Discuss these with your group. You may need to update these as the project progresses.
 > Milestone of this project.
 
 | Task                                      | Start Date | End Date   | Duration | Week |
@@ -60,7 +49,16 @@ The objectives of this project are:
 ## Findings Report
 
 <!-- Below you should report all of your findings in each section. You can fill this out as the project progresses. -->
-The project's diverse results include insights from the prediction of wine quality as well as the classification of fruit images. Clustering in wine analysis indicated minor variations in quality levels, and K-means performed better after feature selection. Decision trees, when combined with K-fold cross-validation to avoid overfitting problems, provided a high degree of accuracy in wine quality prediction. Neural networks, in particular CNNs, performed better than other models when it came to classifying fruit images, showing the importance of architecture in model success.
+Some of the findings are listed below.
+
+**1. Wine Dataset**
+  - _**Data exploration and visualization**_ - No missing values in dataset, strong correlation between features(free sulfur and total sulfur) so one of them can be dropped. It was observed that wine quality is dependent on alcohol content and acidity.  
+  - _**Clustering**_ - Including all the features could not conclude to optimal number of clusters(No clear elbow point with elbow method, low silhouette score). Clustering with selected features resulted into better silhouette score and clear elbow point suggesting k=3 number of clusters.  
+  - _**Decision Trees**_ - For Wine type prediction, model was suspected to overfitting so we did k-fold cross validation, regularisation(pruning), after this model is fitting well giving good accuracy. For wine qualiity, there was significat difference between test and training accuracy, show overfitting. Even after regularisation, we could not fit the model for better accuracy for wine quality.
+    
+**2. Fruits image dataset**
+  - **_Artificial Neural Networks(ANN)_** - We implemented single layer network(around 84 percent accuracy), with 3 hidden layers(92 % accuracy). Adding layers helped to increase the accuracy. 
+  - **_Convolutional neural networks(CNN)_** - This gave around 96 percent accuracy with two hidden layers, depecting that CNN works better than ANN in our case. 
 
 ### Datasets
 1.  **Wine Quality Dataset:**
@@ -78,13 +76,9 @@ The project's diverse results include insights from the prediction of wine quali
 ### Dataset description
 
 ##### Wine Quality Dataset
-**Objective:** The objective of this dataset is to build a machine learning model that can predict the quality of a wine based on its chemical composition. 
-
 The Wine Quality Dataset is a dataset that contains information about the chemical properties of various wines, example below shows the information about the attributes and the data of this dataset.
   
 ##### Fruit 360 Dataset
-**Objective:** This dataset is used for neural network tasks, including classification and regression.
-
 Fruits 360 dataset is a dataset that contains images of different fruits with 100 * 100 pixel dimension . These images cover different types of fruits. Each fruit is shown from various angles and under different lighting conditions, making the dataset representative of real-world scenarios. 
 
 ### Dataset examples
