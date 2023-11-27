@@ -60,6 +60,7 @@ The objectives of this project are:
 ## Findings Report
 
 <!-- Below you should report all of your findings in each section. You can fill this out as the project progresses. -->
+The project's diverse results include insights from the prediction of wine quality as well as the classification of fruit images. Clustering in wine analysis indicated minor variations in quality levels, and K-means performed better after feature selection. Decision trees, when combined with K-fold cross-validation to avoid overfitting problems, provided a high degree of accuracy in wine quality prediction. Neural networks, in particular CNNs, performed better than other models when it came to classifying fruit images, showing the importance of architecture in model success.
 
 ### Datasets
 1.  **Wine Quality Dataset:**
